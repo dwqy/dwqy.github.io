@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta name="google-site-verification" content="DwDg4EuywHWNZUkTC7sG0WGv_UQekM4uRtOoaGuDJHc">
+<meta name="baidu-site-verification" content="hkLiBHH93D">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="C Sharp基础知识2">
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaoyi">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://dwqy.github.io/post/80f4lg63.html">
+
+
+<meta name="description" content="C Sharp的基础知识，面向对象">
+<meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C Sharp基础知识2">
+<meta property="og:url" content="https://dwqy.github.io/post/80f4lg63.html">
+<meta property="og:site_name" content="Xiaoyi">
+<meta property="og:description" content="C Sharp的基础知识，面向对象">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-12-29T22:05:37.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C Sharp基础知识2">
+<meta name="twitter:description" content="C Sharp的基础知识，面向对象">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+
+  <link href="/plugins/prettify/prettify.css" rel="stylesheet">
+
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b733e1eaeacbf8f87d3be047f28c3973";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <title> C Sharp基础知识2 - Xiaoyi </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Xiaoyi</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/archives">
+                            
+                            
+                                归档
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/atom.xml">
+                            
+                            
+                                订阅
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          C Sharp基础知识2
+        
+      </h1>
+
+      <time class="post-time">
+          2019-12-30
+      </time>
+    </header>
+
+
+
+    
+            
+  <div class="toc-container">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#三-面向对象"><span class="toc-text">三.面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-面向对象编程简介"><span class="toc-text">1.面向对象编程简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-定义类及类成员"><span class="toc-text">2.定义类及类成员</span></a></li></ol></li></ol>
+  </div> 
+
+
+            <div class="post-content">
+                <div class="excerpt"><br>C Sharp的基础知识，面向对象<br></div>
+
+<a id="more"></a>
+<h2 id="三-面向对象"><a href="#三-面向对象" class="headerlink" title="三.面向对象"></a>三.面向对象</h2><h3 id="1-面向对象编程简介"><a href="#1-面向对象编程简介" class="headerlink" title="1.面向对象编程简介"></a>1.面向对象编程简介</h3><ol>
+<li>如何理解对象的概念<ul>
+<li>某种可为人所感知的物质</li>
+<li>思维、感受或动作所作用的物质或者精神载体</li>
+<li>万物皆是对象</li>
+</ul>
+</li>
+<li>C#中的对象是从类型中创建的。<ul>
+<li>对象的类型在面向对象编程中有一个特殊的名称：类</li>
+<li>“类”和“对象”是完全不同的两个概念</li>
+<li>类是我们炒菜的菜谱，对象就是炒出来的菜</li>
+<li>类是抽象的，对象是具体的</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-定义类及类成员"><a href="#2-定义类及类成员" class="headerlink" title="2.定义类及类成员"></a>2.定义类及类成员</h3><ol>
+<li><p>常量</p>
+<p>与类关联的常数值</p>
+</li>
+<li><p>字段</p>
+<p>类的变量</p>
+</li>
+<li><p>方法</p>
+<p>类可执行的计算和操作</p>
+</li>
+<li><p>属性</p>
+<p>与读写类的命名属性相关联的操作</p>
+</li>
+<li><p>运算符</p>
+<p>类所支持的转换和表达式运算符</p>
+</li>
+<li><p>构造函数</p>
+<p>初始化类的实例或类本身所需的操作</p>
+<ul>
+<li><p>默认构造函数</p>
+<p>默认构造函数不带参数，只能把所有的成员字段初始化为标准的默认值</p>
+</li>
+<li><p>自定义构造函数</p>
+<p>若显示添加了一个带参数的构造函数，则无法使 用不带任何参数的默认构造函数。但是此时我们 可以显式添加一个默认构造函数。</p>
+</li>
+<li><p>静态构造函数</p>
+<p>静态构造函数没有参数和访问修饰符，只执行一 次。</p>
+<p>一个类只能有一个静态构造函数。</p>
+<p>静态构造函数只能访问类的静态成员，不能访问 实例成员。</p>
+<p>无参数的实例构造函数和静态构造函数可以在同 一个类中同时定义。虽然参数列表相同，但二者 并不矛盾</p>
+</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+      <ul class="post-copyright">
+        <li class="post-copyright-author">
+            <span>本文作者：</span>Xiaoyi
+        </li>
+        <li class="post-copyright-link">
+          <span>本文链接：</span>
+          <a href="https://dwqy.github.io//post/80f4lg63.html" title="C Sharp基础知识2">https://dwqy.github.io/post/80f4lg63.html</a>
+        </li>
+        <li class="post-copyright-license">
+          <span>版权： </span>
+          本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+        </li>
+      </ul>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/post/ivt7m1ve.html">
+        <span class="next-text nav-default">C Sharp基本知识1</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+      
+        
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+    <div id="gitalk-container"></div>
+
+    <script>
+        var gitalk = new Gitalk({
+            clientID: 'ca4ae20760cf27ad5c6c',
+            clientSecret: '671788fb8d6aed08906b70340a8ba3088ec03f39',
+            repo: 'gd4Ark.github.io',
+            owner: 'gd4Ark',
+            admin: 'gd4Ark',
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: 'false'  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+      
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+    2019
+    <span class="footer-author">Xiaoyi.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+<!--prettify代码高亮脚本引入-->
+
+    <script src="/plugins/prettify/prettify.js"></script>
+    <script type="text/javascript">
+    jQuery(function($){
+        $('pre').addClass('prettyprint');
+        prettyPrint();
+    });
+    </script>
+
+
+  </body>
+</html>
