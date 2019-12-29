@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2019-12-29T07:12:56.017Z</updated>
+  <updated>2019-12-29T08:31:08.991Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C Sharp基本知识1</title>
+    <link href="https://dwqy.github.io/post/ivt7m1ve.html"/>
+    <id>https://dwqy.github.io/post/ivt7m1ve.html</id>
+    <published>2019-12-29T07:29:29.000Z</published>
+    <updated>2019-12-29T08:31:08.991Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一-初识C"><a href="#一-初识C" class="headerlink" title="一.初识C"></a>一.初识C</h2><h3 id="1-开始学习前的准备"><a href="#1-开始学习前的准备" class="headerlink" title="1.开始学习前的准备"></a>1.开始学习前的准备</h3><ol><li>C#简介</li></ol><p>   C#语言介绍，.NET Framework简介，开发工具Visual Studio介绍</p><ol start="2"><li>C#语言用途</li></ol><p>   winform、webform、web servier、游戏开发Unity</p><ol start="3"><li>vs2010的安装</li></ol><h2 id="二-编程语言基础"><a href="#二-编程语言基础" class="headerlink" title="二.编程语言基础"></a>二.编程语言基础</h2><h3 id="1-变量和表达式"><a href="#1-变量和表达式" class="headerlink" title="1.变量和表达式"></a>1.变量和表达式</h3><ol><li><p>编写第一个C#程序</p><p>创建了一个winform程序，输出helloworld</p><p>了解vs的大致结构</p></li><li><p>C#的基本语法说明</p><ul><li>代码以分号结束</li><li>代码缩进格式</li><li>代码注释方式：多行和单号</li><li>#region代码块</li></ul></li><li><p>变量和表达式</p><ul><li>简单类型：sbyte、byte、short、ushort、uint、long和ulong、int、float double decimal、string、bool、char</li></ul></li><li><p>变量的命名规则</p><p>开头第一个字母必须是：字母、下划线、@符号中任意的一个，后面的字符可以是字母 下划线或者是数字，不可以以数字开头</p></li><li><p>变量的声明和赋值</p><p>使用变量前需要先进行初始化  </p><p>相同类型的两个变量，声明时可以用逗号进行分<br>隔。例如：int age,size;  </p></li><li><p>表达式</p><ul><li><p>数学运算</p><p>++、–、+、-、*、/、%、三元？</p></li><li><p>赋值运算</p><p>=、+=、-=、*=、/=、%=</p></li></ul></li></ol><h3 id="2-逻辑控制"><a href="#2-逻辑控制" class="headerlink" title="2.逻辑控制"></a>2.逻辑控制</h3><ol><li><p>布尔逻辑</p><p>字符串类型：==、!=</p><p>数字类型：==、!=、&gt;、&gt;=、&lt;、&lt;=</p><p>布尔条件运算符：||、&amp;&amp;</p></li><li><p>分支</p><p>三元运算符：? :</p><p>if语句</p><p>switch语句</p><p>循环语句：do、while、for</p><p>循环的中断：break、continue、return</p></li></ol><h3 id="3-关于变量的扩展"><a href="#3-关于变量的扩展" class="headerlink" title="3.关于变量的扩展"></a>3.关于变量的扩展</h3><ol><li><p>类型转换</p><p>隐式转换：系统自动转，一般都是小转大</p><p>显示转换：需要手动转换 ，使用Convert命令</p></li><li><p>枚举</p><p>枚举是具有一组命名常量的独特的值类型</p></li><li><p>结构</p></li><li><p>数组</p><p>数组是一个变量的索引列表</p></li><li><p>对字符串的处理</p><ul><li><p>ToLower() 转小写  </p></li><li><p>ToUpper() 转大写  </p></li><li><p>Trim() 去掉空格  </p></li><li><p>PadLeft() PadRight() 在左边/右边添加空格或者字符串</p></li><li><p>Replace() 替换字符  </p></li><li><p>Remove() 删除字符  </p></li><li><p>Substring() 字符串提取  </p></li><li><p>IndexOf() 获取指定的字符串的开始索引  </p></li><li><p>Equals() 是否相等  </p></li><li><p>Contains() 判断是否存在  </p></li><li><p>EndsWith,StartsWith() 判断字符串的开始或结束  </p></li></ul></li></ol><h3 id="4-函数"><a href="#4-函数" class="headerlink" title="4.函数"></a>4.函数</h3><ol><li><p>定义函数</p><ul><li><p>定义函数使用static 和 void 关键字 后面是函数的名字  </p></li><li><p>函数的名字使用一对小括号 ()  </p></li><li><p>函数中是一个句或者几句代码组成的一个代码片段</p></li><li><p>函数可以有返回值 有返回值的函数 用返回值的类型代替void关键字  </p></li><li><p>函数也可以有参数 参数写在定义函数时函数名字后面的小括号中，如果有多个参数，使用逗号隔开，参数可以是不同的数据类型。  参数中可以带有ref和out关键字</p></li></ul></li></ol><ol start="2"><li><p>使用函数</p><ul><li>在函数外调用函数的名字就可以使用函数  </li><li>调用有参数的函数时，必须使提供的参数与函数定义时指定的参数完全匹配，包括类型，数量，顺序。  </li></ul></li><li><p>变量的作用范围</p></li><li><p>函数的重载</p><p>函数名字相同，但是参数不同，叫做函数的重载  </p><p>函数参数相同，返回值不同，也是函数的重载  </p></li></ol><h3 id="5-调试和错误处理"><a href="#5-调试和错误处理" class="headerlink" title="5.调试和错误处理"></a>5.调试和错误处理</h3><ol><li><p>语法错误</p><p>写好后就会提示</p></li><li><p>逻辑错误</p><p>程序运行后才会发现的</p></li><li><p>使用vs调试代码</p><p>添加断点进行调试</p></li><li><p>错误处理</p><ul><li>能够预料到可能发生的错误时，提前将错误处理掉。避免程序崩溃。  </li><li>错误处理使用 try…catch…finally  </li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一-初识C&quot;&gt;&lt;a href=&quot;#一-初识C&quot; class=&quot;headerlink&quot; title=&quot;一.初识C&quot;&gt;&lt;/a&gt;一.初识C&lt;/h2&gt;&lt;h3 id=&quot;1-开始学习前的准备&quot;&gt;&lt;a href=&quot;#1-开始学习前的准备&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>新的开始</title>

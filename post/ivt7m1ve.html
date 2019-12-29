@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta name="google-site-verification" content="DwDg4EuywHWNZUkTC7sG0WGv_UQekM4uRtOoaGuDJHc">
+<meta name="baidu-site-verification" content="hkLiBHH93D">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="C Sharp基本知识1">
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaoyi">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://dwqy.github.io/post/ivt7m1ve.html">
+
+
+<meta name="description" content="一.初识C1.开始学习前的准备 C#简介     C#语言介绍，.NET Framework简介，开发工具Visual Studio介绍  C#语言用途     winform、webform、web servier、游戏开发Unity  vs2010的安装  二.编程语言基础1.变量和表达式 编写第一个C#程序 创建了一个winform程序，输出helloworld 了解vs的大致结构  C#的">
+<meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C Sharp基本知识1">
+<meta property="og:url" content="https://dwqy.github.io/post/ivt7m1ve.html">
+<meta property="og:site_name" content="Xiaoyi">
+<meta property="og:description" content="一.初识C1.开始学习前的准备 C#简介     C#语言介绍，.NET Framework简介，开发工具Visual Studio介绍  C#语言用途     winform、webform、web servier、游戏开发Unity  vs2010的安装  二.编程语言基础1.变量和表达式 编写第一个C#程序 创建了一个winform程序，输出helloworld 了解vs的大致结构  C#的">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-12-29T08:31:08.991Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C Sharp基本知识1">
+<meta name="twitter:description" content="一.初识C1.开始学习前的准备 C#简介     C#语言介绍，.NET Framework简介，开发工具Visual Studio介绍  C#语言用途     winform、webform、web servier、游戏开发Unity  vs2010的安装  二.编程语言基础1.变量和表达式 编写第一个C#程序 创建了一个winform程序，输出helloworld 了解vs的大致结构  C#的">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+
+  <link href="/plugins/prettify/prettify.css" rel="stylesheet">
+
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b733e1eaeacbf8f87d3be047f28c3973";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <title> C Sharp基本知识1 - Xiaoyi </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Xiaoyi</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/archives">
+                            
+                            
+                                归档
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/atom.xml">
+                            
+                            
+                                订阅
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          C Sharp基本知识1
+        
+      </h1>
+
+      <time class="post-time">
+          2019-12-29
+      </time>
+    </header>
+
+
+
+    
+            
+  <div class="toc-container">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-初识C"><span class="toc-text">一.初识C</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-开始学习前的准备"><span class="toc-text">1.开始学习前的准备</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-编程语言基础"><span class="toc-text">二.编程语言基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-变量和表达式"><span class="toc-text">1.变量和表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-逻辑控制"><span class="toc-text">2.逻辑控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-关于变量的扩展"><span class="toc-text">3.关于变量的扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-函数"><span class="toc-text">4.函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-调试和错误处理"><span class="toc-text">5.调试和错误处理</span></a></li></ol></li></ol>
+  </div> 
+
+
+            <div class="post-content">
+                <h2 id="一-初识C"><a href="#一-初识C" class="headerlink" title="一.初识C"></a>一.初识C</h2><h3 id="1-开始学习前的准备"><a href="#1-开始学习前的准备" class="headerlink" title="1.开始学习前的准备"></a>1.开始学习前的准备</h3><ol>
+<li>C#简介</li>
+</ol>
+<p>   C#语言介绍，.NET Framework简介，开发工具Visual Studio介绍</p>
+<ol start="2">
+<li>C#语言用途</li>
+</ol>
+<p>   winform、webform、web servier、游戏开发Unity</p>
+<ol start="3">
+<li>vs2010的安装</li>
+</ol>
+<h2 id="二-编程语言基础"><a href="#二-编程语言基础" class="headerlink" title="二.编程语言基础"></a>二.编程语言基础</h2><h3 id="1-变量和表达式"><a href="#1-变量和表达式" class="headerlink" title="1.变量和表达式"></a>1.变量和表达式</h3><ol>
+<li><p>编写第一个C#程序</p>
+<p>创建了一个winform程序，输出helloworld</p>
+<p>了解vs的大致结构</p>
+</li>
+<li><p>C#的基本语法说明</p>
+<ul>
+<li>代码以分号结束</li>
+<li>代码缩进格式</li>
+<li>代码注释方式：多行和单号</li>
+<li>#region代码块</li>
+</ul>
+</li>
+<li><p>变量和表达式</p>
+<ul>
+<li>简单类型：sbyte、byte、short、ushort、uint、long和ulong、int、float double decimal、string、bool、char</li>
+</ul>
+</li>
+<li><p>变量的命名规则</p>
+<p>开头第一个字母必须是：字母、下划线、@符号中任意的一个，后面的字符可以是字母 下划线或者是数字，不可以以数字开头</p>
+</li>
+<li><p>变量的声明和赋值</p>
+<p>使用变量前需要先进行初始化  </p>
+<p>相同类型的两个变量，声明时可以用逗号进行分<br>隔。例如：int age,size;  </p>
+</li>
+<li><p>表达式</p>
+<ul>
+<li><p>数学运算</p>
+<p>++、–、+、-、*、/、%、三元？</p>
+</li>
+<li><p>赋值运算</p>
+<p>=、+=、-=、*=、/=、%=</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-逻辑控制"><a href="#2-逻辑控制" class="headerlink" title="2.逻辑控制"></a>2.逻辑控制</h3><ol>
+<li><p>布尔逻辑</p>
+<p>字符串类型：==、!=</p>
+<p>数字类型：==、!=、&gt;、&gt;=、&lt;、&lt;=</p>
+<p>布尔条件运算符：||、&amp;&amp;</p>
+</li>
+<li><p>分支</p>
+<p>三元运算符：? :</p>
+<p>if语句</p>
+<p>switch语句</p>
+<p>循环语句：do、while、for</p>
+<p>循环的中断：break、continue、return</p>
+</li>
+</ol>
+<h3 id="3-关于变量的扩展"><a href="#3-关于变量的扩展" class="headerlink" title="3.关于变量的扩展"></a>3.关于变量的扩展</h3><ol>
+<li><p>类型转换</p>
+<p>隐式转换：系统自动转，一般都是小转大</p>
+<p>显示转换：需要手动转换 ，使用Convert命令</p>
+</li>
+<li><p>枚举</p>
+<p>枚举是具有一组命名常量的独特的值类型</p>
+</li>
+<li><p>结构</p>
+</li>
+<li><p>数组</p>
+<p>数组是一个变量的索引列表</p>
+</li>
+<li><p>对字符串的处理</p>
+<ul>
+<li><p>ToLower() 转小写  </p>
+</li>
+<li><p>ToUpper() 转大写  </p>
+</li>
+<li><p>Trim() 去掉空格  </p>
+</li>
+<li><p>PadLeft() PadRight() 在左边/右边添加空格或者字符串</p>
+</li>
+<li><p>Replace() 替换字符  </p>
+</li>
+<li><p>Remove() 删除字符  </p>
+</li>
+<li><p>Substring() 字符串提取  </p>
+</li>
+<li><p>IndexOf() 获取指定的字符串的开始索引  </p>
+</li>
+<li><p>Equals() 是否相等  </p>
+</li>
+<li><p>Contains() 判断是否存在  </p>
+</li>
+<li><p>EndsWith,StartsWith() 判断字符串的开始或结束  </p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-函数"><a href="#4-函数" class="headerlink" title="4.函数"></a>4.函数</h3><ol>
+<li><p>定义函数</p>
+<ul>
+<li><p>定义函数使用static 和 void 关键字 后面是函数的名字  </p>
+</li>
+<li><p>函数的名字使用一对小括号 ()  </p>
+</li>
+<li><p>函数中是一个句或者几句代码组成的一个代码片段</p>
+</li>
+<li><p>函数可以有返回值 有返回值的函数 用返回值的类型代替void关键字  </p>
+</li>
+<li><p>函数也可以有参数 参数写在定义函数时函数名字后面的小括号中，如果有多个参数，使用逗号隔开，参数可以是不同的数据类型。  参数中可以带有ref和out关键字</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>使用函数</p>
+<ul>
+<li>在函数外调用函数的名字就可以使用函数  </li>
+<li>调用有参数的函数时，必须使提供的参数与函数定义时指定的参数完全匹配，包括类型，数量，顺序。  </li>
+</ul>
+</li>
+<li><p>变量的作用范围</p>
+</li>
+<li><p>函数的重载</p>
+<p>函数名字相同，但是参数不同，叫做函数的重载  </p>
+<p>函数参数相同，返回值不同，也是函数的重载  </p>
+</li>
+</ol>
+<h3 id="5-调试和错误处理"><a href="#5-调试和错误处理" class="headerlink" title="5.调试和错误处理"></a>5.调试和错误处理</h3><ol>
+<li><p>语法错误</p>
+<p>写好后就会提示</p>
+</li>
+<li><p>逻辑错误</p>
+<p>程序运行后才会发现的</p>
+</li>
+<li><p>使用vs调试代码</p>
+<p>添加断点进行调试</p>
+</li>
+<li><p>错误处理</p>
+<ul>
+<li>能够预料到可能发生的错误时，提前将错误处理掉。避免程序崩溃。  </li>
+<li>错误处理使用 try…catch…finally  </li>
+</ul>
+</li>
+</ol>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+      <ul class="post-copyright">
+        <li class="post-copyright-author">
+            <span>本文作者：</span>Xiaoyi
+        </li>
+        <li class="post-copyright-link">
+          <span>本文链接：</span>
+          <a href="https://dwqy.github.io//post/ivt7m1ve.html" title="C Sharp基本知识1">https://dwqy.github.io/post/ivt7m1ve.html</a>
+        </li>
+        <li class="post-copyright-license">
+          <span>版权： </span>
+          本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+        </li>
+      </ul>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/post/f6ef2a76.html">
+        <span class="next-text nav-default">新的开始</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+      
+        
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+    <div id="gitalk-container"></div>
+
+    <script>
+        var gitalk = new Gitalk({
+            clientID: 'ca4ae20760cf27ad5c6c',
+            clientSecret: '671788fb8d6aed08906b70340a8ba3088ec03f39',
+            repo: 'gd4Ark.github.io',
+            owner: 'gd4Ark',
+            admin: 'gd4Ark',
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: 'false'  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+      
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+    2019
+    <span class="footer-author">Xiaoyi.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+<!--prettify代码高亮脚本引入-->
+
+    <script src="/plugins/prettify/prettify.js"></script>
+    <script type="text/javascript">
+    jQuery(function($){
+        $('pre').addClass('prettyprint');
+        prettyPrint();
+    });
+    </script>
+
+
+  </body>
+</html>
