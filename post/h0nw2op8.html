@@ -14,7 +14,7 @@
 
 
 
-  <meta name="description" content="C Sharp基础知识2">
+  <meta name="description" content="C Sharp桌面程序开发1">
 
 
 
@@ -31,21 +31,21 @@
 
 
 
-<link rel="canonical" href="https://dwqy.github.io/post/80f4lg63.html">
+<link rel="canonical" href="https://dwqy.github.io/post/h0nw2op8.html">
 
 
-<meta name="description" content="C Sharp的基础知识，面向对象">
+<meta name="description" content="WinForm的控件介绍">
 <meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C Sharp基础知识2">
-<meta property="og:url" content="https://dwqy.github.io/post/80f4lg63.html">
+<meta property="og:title" content="C Sharp桌面程序开发1">
+<meta property="og:url" content="https://dwqy.github.io/post/h0nw2op8.html">
 <meta property="og:site_name" content="Xiaoyi">
-<meta property="og:description" content="C Sharp的基础知识，面向对象">
+<meta property="og:description" content="WinForm的控件介绍">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-12-31T02:16:43.884Z">
+<meta property="og:updated_time" content="2020-01-01T07:54:46.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C Sharp基础知识2">
-<meta name="twitter:description" content="C Sharp的基础知识，面向对象">
+<meta name="twitter:title" content="C Sharp桌面程序开发1">
+<meta name="twitter:description" content="WinForm的控件介绍">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <title> C Sharp基础知识2 - Xiaoyi </title>
+    <title> C Sharp桌面程序开发1 - Xiaoyi </title>
   </head>
 
   <body>
@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
     <header class="post-header">
       <h1 class="post-title">
         
-          C Sharp基础知识2
+          C Sharp桌面程序开发1
         
       </h1>
 
@@ -160,66 +160,102 @@ var _hmt = _hmt || [];
     
             
   <div class="toc-container">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#三-面向对象"><span class="toc-text">三.面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-面向对象编程简介"><span class="toc-text">1.面向对象编程简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-定义类及类成员"><span class="toc-text">2.定义类及类成员</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#四-windows编程"><span class="toc-text">四.windows编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-常用控件"><span class="toc-text">1.常用控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-WinForm的高级功能"><span class="toc-text">2.WinForm的高级功能</span></a></li></ol></li></ol>
   </div> 
 
 
             <div class="post-content">
-                <div class="excerpt"><br>C Sharp的基础知识，面向对象<br></div>
+                <div class="excerpt"><br>WinForm的控件介绍<br></div>
 
 <a id="more"></a>
-<h2 id="三-面向对象"><a href="#三-面向对象" class="headerlink" title="三.面向对象"></a>三.面向对象</h2><h3 id="1-面向对象编程简介"><a href="#1-面向对象编程简介" class="headerlink" title="1.面向对象编程简介"></a>1.面向对象编程简介</h3><ol>
-<li>如何理解对象的概念<ul>
-<li>某种可为人所感知的物质</li>
-<li>思维、感受或动作所作用的物质或者精神载体</li>
-<li>万物皆是对象</li>
+<h2 id="四-windows编程"><a href="#四-windows编程" class="headerlink" title="四.windows编程"></a>四.windows编程</h2><h3 id="1-常用控件"><a href="#1-常用控件" class="headerlink" title="1.常用控件"></a>1.常用控件</h3><ul>
+<li><p>控件的介绍</p>
+<p>属性：都有的属性,StartPosition、WindowState、MaximizeBox、MinimizeBox</p>
+<p>事件：Load 、Closing、Closed</p>
+<p>托拽布局</p>
+</li>
+<li><p>Button控件  </p>
+<p>属性：BackgroundImage、BackgroundImageLay</p>
+<p>事件：Click</p>
+</li>
+<li><p>Label LinkLabel控件  </p>
+</li>
+<li><p>TextBox控件  </p>
+<p>属性：Multiline变成多行文本</p>
+</li>
+<li><p>RadioButton控件  </p>
+</li>
+<li><p>CheckBox控件  </p>
+<p>属性：Checked</p>
+<p>事件：CheckedChanged</p>
+</li>
+<li><p>ListBox控件  </p>
+<p>用的比较少</p>
+<p>属性：items</p>
+<p>事件：SelectedIndexChanged</p>
+</li>
+<li><p>ComboBox</p>
+<p>属性：items、DropDownStyle(设置选择的内容是否可选)</p>
+<p>事件：SelectedIndexChanged</p>
+</li>
+<li><p>dateTimePicker</p>
+<p>属性：Format、CustomFormat</p>
+<p>事件：</p>
+</li>
+<li><p>ListView控件  </p>
+</li>
+<li><p>TabControl控件  </p>
+</li>
+<li><p>maskedTextBox</p>
+<p>属性：Mask设置字体格式的</p>
+</li>
+<li><p>label</p>
+</li>
+<li><p>linkLabel</p>
+<p>属性：</p>
+<p>事件：点击事件，比如技术支持，可以调用ie</p>
+</li>
+<li><p>radioButton 单选</p>
+<p>属性：</p>
+<p>方法：</p>
+</li>
+<li><p>pictureBox 插入图片</p>
+</li>
+<li><p>treeView</p>
+</li>
+<li><p>toolTip 鼠标放置指定的控件会提示之前的信息</p>
+</li>
+<li><p>等等</p>
+</li>
 </ul>
+<h3 id="2-WinForm的高级功能"><a href="#2-WinForm的高级功能" class="headerlink" title="2.WinForm的高级功能"></a>2.WinForm的高级功能</h3><ul>
+<li><p>MenuStrip 菜单栏  </p>
+<p>属性：DropDownItems</p>
+<p>事件：单击事件</p>
 </li>
-<li>C#中的对象是从类型中创建的。<ul>
-<li>对象的类型在面向对象编程中有一个特殊的名称：类</li>
-<li>“类”和“对象”是完全不同的两个概念</li>
-<li>类是我们炒菜的菜谱，对象就是炒出来的菜</li>
-<li>类是抽象的，对象是具体的</li>
-</ul>
+<li><p>ToolStrip 工具栏  </p>
+<p>属性：Items、DisplayStyle、ToolTipText</p>
+<p>事件：单击事件</p>
 </li>
-</ol>
-<h3 id="2-定义类及类成员"><a href="#2-定义类及类成员" class="headerlink" title="2.定义类及类成员"></a>2.定义类及类成员</h3><ol>
-<li><p>常量</p>
-<p>与类关联的常数值</p>
+<li><p>StatusStrip 状态栏  </p>
+<p>属性：Items 使用需要用form窗体的ContextMenuStrip</p>
+<p>事件：</p>
 </li>
-<li><p>字段</p>
-<p>类的变量</p>
-<p>vs中一个长方块图标</p>
+<li><p>ContextMenuStrip 右键信息</p>
+<p>属性：Items 使用需要用form窗体的ContextMenuStrip</p>
+<p>事件：</p>
 </li>
-<li><p>方法</p>
-<p>类可执行的计算和操作</p>
-<p>vs中一个扳手图标正方形</p>
+<li><p>TabControl</p>
+<p>属性：Dock</p>
+<p>事件：</p>
 </li>
-<li><p>属性</p>
-<p>与读写类的命名属性相关联的操作</p>
-<p>vs中一个扳手图标</p>
+<li><p>splitContainer</p>
 </li>
-<li><p>运算符</p>
-<p>类所支持的转换和表达式运算符</p>
+<li><p>SDI 单一文档界面  </p>
 </li>
-<li><p>构造函数</p>
-<p>初始化类的实例或类本身所需的操作</p>
-<ul>
-<li><p>默认构造函数</p>
-<p>默认构造函数不带参数，只能把所有的成员字段初始化为标准的默认值</p>
-</li>
-<li><p>自定义构造函数</p>
-<p>若显示添加了一个带参数的构造函数，则无法使 用不带任何参数的默认构造函数。但是此时我们 可以显式添加一个默认构造函数。</p>
-</li>
-<li><p>静态构造函数</p>
-<p>静态构造函数没有参数和访问修饰符，只执行一 次。</p>
-<p>一个类只能有一个静态构造函数。</p>
-<p>静态构造函数只能访问类的静态成员，不能访问 实例成员。</p>
-<p>无参数的实例构造函数和静态构造函数可以在同 一个类中同时定义。虽然参数列表相同，但二者 并不矛盾</p>
+<li><p>MDI 多文档界面  </p>
 </li>
 </ul>
-</li>
-</ol>
 
             </div>
           
@@ -232,7 +268,7 @@ var _hmt = _hmt || [];
         </li>
         <li class="post-copyright-link">
           <span>本文链接：</span>
-          <a href="https://dwqy.github.io//post/80f4lg63.html" title="C Sharp基础知识2">https://dwqy.github.io/post/80f4lg63.html</a>
+          <a href="https://dwqy.github.io//post/h0nw2op8.html" title="C Sharp桌面程序开发1">https://dwqy.github.io/post/h0nw2op8.html</a>
         </li>
         <li class="post-copyright-license">
           <span>版权： </span>
@@ -245,15 +281,9 @@ var _hmt = _hmt || [];
         
   <nav class="post-nav">
     
-      <a class="prev" href="/post/h0nw2op8.html">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">C Sharp桌面程序开发1</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/post/ivt7m1ve.html">
-        <span class="next-text nav-default">C Sharp基本知识1</span>
+      <a class="next" href="/post/80f4lg63.html">
+        <span class="next-text nav-default">C Sharp基础知识2</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
