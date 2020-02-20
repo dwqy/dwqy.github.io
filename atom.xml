@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-02-20T03:15:44.788Z</updated>
+  <updated>2020-02-20T05:09:28.970Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL</title>
+    <link href="https://dwqy.github.io/post/add-com-error-HRESULT%20E_FAIL.html"/>
+    <id>https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html</id>
+    <published>2020-02-20T05:07:45.000Z</published>
+    <updated>2020-02-20T05:09:28.970Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）</p></li><li><p>定位到你的vs2017的安装目录</p><p>例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies<br>先输入cd c: 切换到c盘 再cd C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies</p></li><li><p>执行下面的代码</p><pre><code>gacutil -i Microsoft.VisualStudio.Shell.Interop.11.0.dll</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;定位到你的vs2017的安装目录&lt;/p&gt;
+&lt;p&gt;例：C:\Program Files (x86)
+      
+    
+    </summary>
+    
+      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git中报unable to auto-detect email address 错误的解决拌办法</title>
+    <link href="https://dwqy.github.io/post/git-unable-to-auto-detect-email-add.html"/>
+    <id>https://dwqy.github.io/post/git-unable-to-auto-detect-email-add.html</id>
+    <published>2020-02-20T04:58:42.000Z</published>
+    <updated>2020-02-20T05:03:02.563Z</updated>
+    
+    <content type="html"><![CDATA[<p>新的电脑配置Hexo后上传出现的问题，解决方法如下:<a id="more"></a></p><p>昨天刚配置好的git，今天刚要commit一些修改，就遇到了这个问题<br>** Please tell me who you are.</p><p>Run</p><p>  git config –global user.email “<a href="mailto:you@example.com" target="_blank" rel="noopener">you@example.com</a>“<br>  git config –global user.name “Your Name”</p><p>to set your account’s default identity.<br>Omit –global to set the identity only in this repository.</p><p>fatal: unable to auto-detect email address (got ‘tim@newton.(none)’)</p><p>后来找到了解决办法：</p><p>.deploy_git.git/config</p><p>找到工程目录的.git文件夹，打开之后找到config文件，在最后边加上一句话<br>［user］<br> email＝your email<br> name＝your name<br>your email 和your name随便写上就行</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;新的电脑配置Hexo后上传出现的问题，解决方法如下:
+    
+    </summary>
+    
+      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法</title>

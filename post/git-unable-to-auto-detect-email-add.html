@@ -14,7 +14,7 @@
 
 
 
-  <meta name="description" content="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">
+  <meta name="description" content="git中报unable to auto-detect email address 错误的解决拌办法">
 
 
 
@@ -31,21 +31,21 @@
 
 
 
-<link rel="canonical" href="https://dwqy.github.io/post/ConfigurationManager_NotFound.html">
+<link rel="canonical" href="https://dwqy.github.io/post/git-unable-to-auto-detect-email-add.html">
 
 
-<meta name="description" content="在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示： 命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。">
+<meta name="description" content="新的电脑配置Hexo后上传出现的问题，解决方法如下:">
 <meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">
-<meta property="og:url" content="https://dwqy.github.io/post/ConfigurationManager_NotFound.html">
+<meta property="og:title" content="git中报unable to auto-detect email address 错误的解决拌办法">
+<meta property="og:url" content="https://dwqy.github.io/post/git-unable-to-auto-detect-email-add.html">
 <meta property="og:site_name" content="Xiaoyi">
-<meta property="og:description" content="在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示： 命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。">
+<meta property="og:description" content="新的电脑配置Hexo后上传出现的问题，解决方法如下:">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-02-20T03:15:44.788Z">
+<meta property="og:updated_time" content="2020-02-20T05:03:02.563Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">
-<meta name="twitter:description" content="在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示： 命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。">
+<meta name="twitter:title" content="git中报unable to auto-detect email address 错误的解决拌办法">
+<meta name="twitter:description" content="新的电脑配置Hexo后上传出现的问题，解决方法如下:">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <title> “System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法 - Xiaoyi </title>
+    <title> git中报unable to auto-detect email address 错误的解决拌办法 - Xiaoyi </title>
   </head>
 
   <body>
@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
     <header class="post-header">
       <h1 class="post-title">
         
-          “System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法
+          git中报unable to auto-detect email address 错误的解决拌办法
         
       </h1>
 
@@ -161,12 +161,15 @@ var _hmt = _hmt || [];
             
 
             <div class="post-content">
-                <p>在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示：</p>
-<p>命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。<a id="more"></a></p>
-<p>而同样的代码在网站项目（新建网站创建的项目）中却不会出错，</p>
-<p>这主要是在新建的类库项目中没有引用程序集system.configration.dll引起的。</p>
-<p>解决方法：</p>
-<p>在使用System.Configuration的项目中添加引用system.configration。</p>
+                <p>新的电脑配置Hexo后上传出现的问题，解决方法如下:<a id="more"></a></p>
+<p>昨天刚配置好的git，今天刚要commit一些修改，就遇到了这个问题<br>** Please tell me who you are.</p>
+<p>Run</p>
+<p>  git config –global user.email “<a href="mailto:you@example.com" target="_blank" rel="noopener">you@example.com</a>“<br>  git config –global user.name “Your Name”</p>
+<p>to set your account’s default identity.<br>Omit –global to set the identity only in this repository.</p>
+<p>fatal: unable to auto-detect email address (got ‘tim@newton.(none)’)</p>
+<p>后来找到了解决办法：</p>
+<p>.deploy_git.git/config</p>
+<p>找到工程目录的.git文件夹，打开之后找到config文件，在最后边加上一句话<br>［user］<br> email＝your email<br> name＝your name<br>your email 和your name随便写上就行</p>
 
             </div>
           
@@ -179,7 +182,7 @@ var _hmt = _hmt || [];
         </li>
         <li class="post-copyright-link">
           <span>本文链接：</span>
-          <a href="https://dwqy.github.io//post/ConfigurationManager_NotFound.html" title="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">https://dwqy.github.io/post/ConfigurationManager_NotFound.html</a>
+          <a href="https://dwqy.github.io//post/git-unable-to-auto-detect-email-add.html" title="git中报unable to auto-detect email address 错误的解决拌办法">https://dwqy.github.io/post/git-unable-to-auto-detect-email-add.html</a>
         </li>
         <li class="post-copyright-license">
           <span>版权： </span>
@@ -192,15 +195,15 @@ var _hmt = _hmt || [];
         
   <nav class="post-nav">
     
-      <a class="prev" href="/post/git-unable-to-auto-detect-email-add.html">
+      <a class="prev" href="/post/add-com-error-HRESULT E_FAIL.html">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">git中报unable to auto-detect email address 错误的解决拌办法</span>
+        <span class="prev-text nav-default">vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL</span>
         <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
-      <a class="next" href="/post/h0nw2op8.html">
-        <span class="next-text nav-default">C Sharp桌面程序开发1</span>
+      <a class="next" href="/post/ConfigurationManager_NotFound.html">
+        <span class="next-text nav-default">“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

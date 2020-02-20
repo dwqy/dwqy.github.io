@@ -14,7 +14,7 @@
 
 
 
-  <meta name="description" content="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">
+  <meta name="description" content="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">
 
 
 
@@ -31,21 +31,21 @@
 
 
 
-<link rel="canonical" href="https://dwqy.github.io/post/ConfigurationManager_NotFound.html">
+<link rel="canonical" href="https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html">
 
 
-<meta name="description" content="在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示： 命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。">
+<meta name="description" content="以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）  定位到你的vs2017的安装目录 例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies先输入cd c: 切换到c盘 再cd C:\Pro">
 <meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">
-<meta property="og:url" content="https://dwqy.github.io/post/ConfigurationManager_NotFound.html">
+<meta property="og:title" content="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">
+<meta property="og:url" content="https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html">
 <meta property="og:site_name" content="Xiaoyi">
-<meta property="og:description" content="在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示： 命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。">
+<meta property="og:description" content="以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）  定位到你的vs2017的安装目录 例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies先输入cd c: 切换到c盘 再cd C:\Pro">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-02-20T03:15:44.788Z">
+<meta property="og:updated_time" content="2020-02-20T05:09:28.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">
-<meta name="twitter:description" content="在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示： 命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。">
+<meta name="twitter:title" content="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">
+<meta name="twitter:description" content="以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）  定位到你的vs2017的安装目录 例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies先输入cd c: 切换到c盘 再cd C:\Pro">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <title> “System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法 - Xiaoyi </title>
+    <title> vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL - Xiaoyi </title>
   </head>
 
   <body>
@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
     <header class="post-header">
       <h1 class="post-title">
         
-          “System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法
+          vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL
         
       </h1>
 
@@ -161,12 +161,16 @@ var _hmt = _hmt || [];
             
 
             <div class="post-content">
-                <p>在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示：</p>
-<p>命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。<a id="more"></a></p>
-<p>而同样的代码在网站项目（新建网站创建的项目）中却不会出错，</p>
-<p>这主要是在新建的类库项目中没有引用程序集system.configration.dll引起的。</p>
-<p>解决方法：</p>
-<p>在使用System.Configuration的项目中添加引用system.configration。</p>
+                <ol>
+<li><p>以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）</p>
+</li>
+<li><p>定位到你的vs2017的安装目录</p>
+<p>例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies<br>先输入cd c: 切换到c盘 再cd C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies</p>
+</li>
+<li><p>执行下面的代码</p>
+<pre><code>gacutil -i Microsoft.VisualStudio.Shell.Interop.11.0.dll
+</code></pre></li>
+</ol>
 
             </div>
           
@@ -179,7 +183,7 @@ var _hmt = _hmt || [];
         </li>
         <li class="post-copyright-link">
           <span>本文链接：</span>
-          <a href="https://dwqy.github.io//post/ConfigurationManager_NotFound.html" title="“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法">https://dwqy.github.io/post/ConfigurationManager_NotFound.html</a>
+          <a href="https://dwqy.github.io//post/add-com-error-HRESULT E_FAIL.html" title="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html</a>
         </li>
         <li class="post-copyright-license">
           <span>版权： </span>
@@ -192,15 +196,9 @@ var _hmt = _hmt || [];
         
   <nav class="post-nav">
     
-      <a class="prev" href="/post/git-unable-to-auto-detect-email-add.html">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">git中报unable to auto-detect email address 错误的解决拌办法</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/post/h0nw2op8.html">
-        <span class="next-text nav-default">C Sharp桌面程序开发1</span>
+      <a class="next" href="/post/git-unable-to-auto-detect-email-add.html">
+        <span class="next-text nav-default">git中报unable to auto-detect email address 错误的解决拌办法</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
