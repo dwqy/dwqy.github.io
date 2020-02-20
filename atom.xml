@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-01-03T05:30:47.886Z</updated>
+  <updated>2020-02-20T03:09:58.467Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法</title>
+    <link href="https://dwqy.github.io/post/ConfigurationManager_NotFound.html"/>
+    <id>https://dwqy.github.io/post/ConfigurationManager_NotFound.html</id>
+    <published>2020-02-20T03:05:14.000Z</published>
+    <updated>2020-02-20T03:09:58.467Z</updated>
+    
+    <content type="html"><![CDATA[<p>在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示：</p><p>命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。</p><p>而同样的代码在网站项目（新建网站创建的项目）中却不会出错，</p><p>这主要是在新建的类库项目中没有引用程序集system.configration.dll引起的。</p><p>解决方法：</p><p>在使用System.Configuration的项目中添加引用system.configration。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示：&lt;/p&gt;
+&lt;p&gt;命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>C Sharp桌面程序开发1</title>
@@ -37,26 +62,6 @@
   </entry>
   
   <entry>
-    <title>MarkDown快速入门</title>
-    <link href="https://dwqy.github.io/post/5kkeii4m.html"/>
-    <id>https://dwqy.github.io/post/5kkeii4m.html</id>
-    <published>2019-12-29T21:44:12.000Z</published>
-    <updated>2020-01-01T09:21:11.877Z</updated>
-    
-    <content type="html"><![CDATA[<div class="excerpt"><br>MarkDown快速入门<br></div><a id="more"></a><h2 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块:"></a>1.代码块:</h2><pre><code class="java">//这是一段java代码public static void main(){  System.out.println(&quot;hello world&quot;);}</code></pre><h2 id="2-标题"><a href="#2-标题" class="headerlink" title="2.标题"></a>2.标题</h2><pre><code class="jade">#####################</code></pre><h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3.字体"></a>3.字体</h2><pre><code class="java">//加粗**我不是加粗字体**//代码高亮显示==代码高亮==//删除线~~被删除线~~//斜体*我是斜体*</code></pre><p><strong>我不是加粗字体</strong></p><p>==代码高亮==</p><p><del>被删除线</del></p><p><em>我是斜体</em></p><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><pre><code class="java">//引用&gt;&gt;&gt;&gt;&gt;&gt;</code></pre><blockquote><p>中国</p></blockquote><blockquote><blockquote><p>江苏</p></blockquote></blockquote><blockquote><blockquote><blockquote><p>苏州</p></blockquote></blockquote></blockquote><h2 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5.分割线"></a>5.分割线</h2><pre><code class="java">***---</code></pre><hr><hr><h2 id="6-图片插入"><a href="#6-图片插入" class="headerlink" title="6.图片插入"></a>6.图片插入</h2><pre><code class="java">//在线图片![自画像](/images/me.jpg)//本地图片</code></pre><p><img src="https://one-piece.cn/templets/default/images/title-index.png" alt="luffy"></p><h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7.超链接"></a>7.超链接</h2><pre><code class="java">//超链接[我的博客](https://dwqy.github.io/)</code></pre><p><a href="https://dwqy.github.io/">我的博客</a></p><h2 id="8-列表"><a href="#8-列表" class="headerlink" title="8.列表"></a>8.列表</h2><pre><code class="java">//无序列表- 目录1- 目录2- 目录3//有序列表1. 江苏</code></pre><ul><li>目录1</li><li>目录2</li><li>目录3</li></ul><ol><li>江苏</li><li>浙江</li><li>上海</li></ol><h2 id="9-表格"><a href="#9-表格" class="headerlink" title="9.表格"></a>9.表格</h2><pre><code class="java">表格的代码不好写，一般都是工具自动生成</code></pre><table><thead><tr><th></th><th>英语</th><th>语文</th></tr></thead><tbody><tr><td>小明</td><td>89</td><td>89</td></tr><tr><td>小李</td><td>89</td><td>90</td></tr><tr><td>小王</td><td>77</td><td>92</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;excerpt&quot;&gt;&lt;br&gt;MarkDown快速入门&lt;br&gt;&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>C Sharp基础知识2</title>
     <link href="https://dwqy.github.io/post/80f4lg63.html"/>
     <id>https://dwqy.github.io/post/80f4lg63.html</id>
@@ -68,6 +73,26 @@
     <summary type="html">
     
       &lt;div class=&quot;excerpt&quot;&gt;&lt;br&gt;C Sharp的基础知识，面向对象&lt;br&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MarkDown快速入门</title>
+    <link href="https://dwqy.github.io/post/5kkeii4m.html"/>
+    <id>https://dwqy.github.io/post/5kkeii4m.html</id>
+    <published>2019-12-29T21:44:12.000Z</published>
+    <updated>2020-01-01T09:21:11.877Z</updated>
+    
+    <content type="html"><![CDATA[<div class="excerpt"><br>MarkDown快速入门<br></div><a id="more"></a><h2 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块:"></a>1.代码块:</h2><pre><code class="java">//这是一段java代码public static void main(){  System.out.println(&quot;hello world&quot;);}</code></pre><h2 id="2-标题"><a href="#2-标题" class="headerlink" title="2.标题"></a>2.标题</h2><pre><code class="jade">#####################</code></pre><h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3.字体"></a>3.字体</h2><pre><code class="java">//加粗**我不是加粗字体**//代码高亮显示==代码高亮==//删除线~~被删除线~~//斜体*我是斜体*</code></pre><p><strong>我不是加粗字体</strong></p><p>==代码高亮==</p><p><del>被删除线</del></p><p><em>我是斜体</em></p><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><pre><code class="java">//引用&gt;&gt;&gt;&gt;&gt;&gt;</code></pre><blockquote><p>中国</p></blockquote><blockquote><blockquote><p>江苏</p></blockquote></blockquote><blockquote><blockquote><blockquote><p>苏州</p></blockquote></blockquote></blockquote><h2 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5.分割线"></a>5.分割线</h2><pre><code class="java">***---</code></pre><hr><hr><h2 id="6-图片插入"><a href="#6-图片插入" class="headerlink" title="6.图片插入"></a>6.图片插入</h2><pre><code class="java">//在线图片![自画像](/images/me.jpg)//本地图片</code></pre><p><img src="https://one-piece.cn/templets/default/images/title-index.png" alt="luffy"></p><h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7.超链接"></a>7.超链接</h2><pre><code class="java">//超链接[我的博客](https://dwqy.github.io/)</code></pre><p><a href="https://dwqy.github.io/">我的博客</a></p><h2 id="8-列表"><a href="#8-列表" class="headerlink" title="8.列表"></a>8.列表</h2><pre><code class="java">//无序列表- 目录1- 目录2- 目录3//有序列表1. 江苏</code></pre><ul><li>目录1</li><li>目录2</li><li>目录3</li></ul><ol><li>江苏</li><li>浙江</li><li>上海</li></ol><h2 id="9-表格"><a href="#9-表格" class="headerlink" title="9.表格"></a>9.表格</h2><pre><code class="java">表格的代码不好写，一般都是工具自动生成</code></pre><table><thead><tr><th></th><th>英语</th><th>语文</th></tr></thead><tbody><tr><td>小明</td><td>89</td><td>89</td></tr><tr><td>小李</td><td>89</td><td>90</td></tr><tr><td>小王</td><td>77</td><td>92</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;excerpt&quot;&gt;&lt;br&gt;MarkDown快速入门&lt;br&gt;&lt;/div&gt;
     
     </summary>
     
