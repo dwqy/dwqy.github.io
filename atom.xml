@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-02-20T05:09:28.970Z</updated>
+  <updated>2020-02-21T02:31:56.342Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）</title>
+    <link href="https://dwqy.github.io/post/VirtualBox-Nat-IpAddress-Repeat.html"/>
+    <id>https://dwqy.github.io/post/VirtualBox-Nat-IpAddress-Repeat.html</id>
+    <published>2020-02-21T02:16:34.000Z</published>
+    <updated>2020-02-21T02:31:56.342Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、序言"><a href="#一、序言" class="headerlink" title="一、序言"></a>一、序言</h3><p>当你使用Virtual box的默认网络模式（网络地址转换Nat）开多台虚拟机的时候会发现，几个虚拟机的IP是一样的（都是10.0.2.15），注意，不仅是克隆主机的时候会出现IP地址相同，即便是几台主机新建的情况下也是如此。</p><p>网上教程有让更换Mac地址来解决问题的，事实上仅更换Mac是解决不了问题的，我认为这也没有真正理解问题所在</p><h3 id="二、问题解析"><a href="#二、问题解析" class="headerlink" title="二、问题解析:"></a>二、问题解析:</h3><p>Net模式是虚拟机通过物理主机与外网相连，虚拟机访问外网的所有流量都要经过物理机，物理机就像一个“门卫”</p><p>Virtual box的默认网络模式（网络地址转换Net）开多台虚拟机，就像让不同虚拟机的流量通过不同的“门”进入内部，也就是说，各虚拟机是在不同的局域网中。</p><p>所以要解决虚拟机IP重复问题要解决两个方面：</p><p>1.虚拟机在同一局域网<br>2.Mac地址各不相同</p><h3 id="三、解决过程："><a href="#三、解决过程：" class="headerlink" title="三、解决过程："></a>三、解决过程：</h3><p>1.全局设定（网络）</p><p>2.添加一个Nat网络（将各个虚拟机放入的局域网）</p><p>3、设置各虚拟机的网络模式，将其放入创建的NAT网络</p><p>4.重置虚拟机的Mac地址</p><p>5.开机查看，完成</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;一、序言&quot;&gt;&lt;a href=&quot;#一、序言&quot; class=&quot;headerlink&quot; title=&quot;一、序言&quot;&gt;&lt;/a&gt;一、序言&lt;/h3&gt;&lt;p&gt;当你使用Virtual box的默认网络模式（网络地址转换Nat）开多台虚拟机的时候会发现，几个虚拟机的IP是一样的（都是1
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL</title>

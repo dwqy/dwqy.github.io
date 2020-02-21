@@ -14,7 +14,7 @@
 
 
 
-  <meta name="description" content="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">
+  <meta name="description" content="Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）">
 
 
 
@@ -31,21 +31,21 @@
 
 
 
-<link rel="canonical" href="https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html">
+<link rel="canonical" href="https://dwqy.github.io/post/VirtualBox-Nat-IpAddress-Repeat.html">
 
 
-<meta name="description" content="以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）  定位到你的vs2017的安装目录 例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies先输入cd c: 切换到c盘 再cd C:\Pro">
+<meta name="description" content="一、序言当你使用Virtual box的默认网络模式（网络地址转换Nat）开多台虚拟机的时候会发现，几个虚拟机的IP是一样的（都是10.0.2.15），注意，不仅是克隆主机的时候会出现IP地址相同，即便是几台主机新建的情况下也是如此。 网上教程有让更换Mac地址来解决问题的，事实上仅更换Mac是解决不了问题的，我认为这也没有真正理解问题所在 二、问题解析:Net模式是虚拟机通过物理主机与外网相连，">
 <meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">
-<meta property="og:url" content="https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html">
+<meta property="og:title" content="Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）">
+<meta property="og:url" content="https://dwqy.github.io/post/VirtualBox-Nat-IpAddress-Repeat.html">
 <meta property="og:site_name" content="Xiaoyi">
-<meta property="og:description" content="以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）  定位到你的vs2017的安装目录 例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies先输入cd c: 切换到c盘 再cd C:\Pro">
+<meta property="og:description" content="一、序言当你使用Virtual box的默认网络模式（网络地址转换Nat）开多台虚拟机的时候会发现，几个虚拟机的IP是一样的（都是10.0.2.15），注意，不仅是克隆主机的时候会出现IP地址相同，即便是几台主机新建的情况下也是如此。 网上教程有让更换Mac地址来解决问题的，事实上仅更换Mac是解决不了问题的，我认为这也没有真正理解问题所在 二、问题解析:Net模式是虚拟机通过物理主机与外网相连，">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-02-20T05:09:28.970Z">
+<meta property="og:updated_time" content="2020-02-21T02:31:56.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">
-<meta name="twitter:description" content="以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）  定位到你的vs2017的安装目录 例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies先输入cd c: 切换到c盘 再cd C:\Pro">
+<meta name="twitter:title" content="Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）">
+<meta name="twitter:description" content="一、序言当你使用Virtual box的默认网络模式（网络地址转换Nat）开多台虚拟机的时候会发现，几个虚拟机的IP是一样的（都是10.0.2.15），注意，不仅是克隆主机的时候会出现IP地址相同，即便是几台主机新建的情况下也是如此。 网上教程有让更换Mac地址来解决问题的，事实上仅更换Mac是解决不了问题的，我认为这也没有真正理解问题所在 二、问题解析:Net模式是虚拟机通过物理主机与外网相连，">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <title> vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL - Xiaoyi </title>
+    <title> Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信） - Xiaoyi </title>
   </head>
 
   <body>
@@ -146,12 +146,12 @@ var _hmt = _hmt || [];
     <header class="post-header">
       <h1 class="post-title">
         
-          vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL
+          Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）
         
       </h1>
 
       <time class="post-time">
-          2020-02-20
+          2020-02-21
       </time>
     </header>
 
@@ -159,18 +159,23 @@ var _hmt = _hmt || [];
 
     
             
+  <div class="toc-container">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、序言"><span class="toc-text">一、序言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、问题解析"><span class="toc-text">二、问题解析:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、解决过程："><span class="toc-text">三、解决过程：</span></a></li></ol>
+  </div> 
+
 
             <div class="post-content">
-                <ol>
-<li><p>以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）</p>
-</li>
-<li><p>定位到你的vs2017的安装目录</p>
-<p>例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies<br>先输入cd c: 切换到c盘 再cd C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies</p>
-</li>
-<li><p>执行下面的代码</p>
-<pre><code>gacutil -i Microsoft.VisualStudio.Shell.Interop.11.0.dll
-</code></pre></li>
-</ol>
+                <h3 id="一、序言"><a href="#一、序言" class="headerlink" title="一、序言"></a>一、序言</h3><p>当你使用Virtual box的默认网络模式（网络地址转换Nat）开多台虚拟机的时候会发现，几个虚拟机的IP是一样的（都是10.0.2.15），注意，不仅是克隆主机的时候会出现IP地址相同，即便是几台主机新建的情况下也是如此。</p>
+<p>网上教程有让更换Mac地址来解决问题的，事实上仅更换Mac是解决不了问题的，我认为这也没有真正理解问题所在</p>
+<h3 id="二、问题解析"><a href="#二、问题解析" class="headerlink" title="二、问题解析:"></a>二、问题解析:</h3><p>Net模式是虚拟机通过物理主机与外网相连，虚拟机访问外网的所有流量都要经过物理机，物理机就像一个“门卫”</p>
+<p>Virtual box的默认网络模式（网络地址转换Net）开多台虚拟机，就像让不同虚拟机的流量通过不同的“门”进入内部，也就是说，各虚拟机是在不同的局域网中。</p>
+<p>所以要解决虚拟机IP重复问题要解决两个方面：</p>
+<p>1.虚拟机在同一局域网<br>2.Mac地址各不相同</p>
+<h3 id="三、解决过程："><a href="#三、解决过程：" class="headerlink" title="三、解决过程："></a>三、解决过程：</h3><p>1.全局设定（网络）</p>
+<p>2.添加一个Nat网络（将各个虚拟机放入的局域网）</p>
+<p>3、设置各虚拟机的网络模式，将其放入创建的NAT网络</p>
+<p>4.重置虚拟机的Mac地址</p>
+<p>5.开机查看，完成</p>
 
             </div>
           
@@ -183,7 +188,7 @@ var _hmt = _hmt || [];
         </li>
         <li class="post-copyright-link">
           <span>本文链接：</span>
-          <a href="https://dwqy.github.io//post/add-com-error-HRESULT E_FAIL.html" title="vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL">https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html</a>
+          <a href="https://dwqy.github.io//post/VirtualBox-Nat-IpAddress-Repeat.html" title="Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）">https://dwqy.github.io/post/VirtualBox-Nat-IpAddress-Repeat.html</a>
         </li>
         <li class="post-copyright-license">
           <span>版权： </span>
@@ -196,15 +201,9 @@ var _hmt = _hmt || [];
         
   <nav class="post-nav">
     
-      <a class="prev" href="/post/VirtualBox-Nat-IpAddress-Repeat.html">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/post/git-unable-to-auto-detect-email-add.html">
-        <span class="next-text nav-default">git中报unable to auto-detect email address 错误的解决拌办法</span>
+      <a class="next" href="/post/add-com-error-HRESULT E_FAIL.html">
+        <span class="next-text nav-default">vs2017添加引用出错：对COM组件的调用返回了错误HRESULT E_FAIL</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
