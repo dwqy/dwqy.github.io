@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-02-21T02:31:56.342Z</updated>
+  <updated>2020-02-27T00:18:12.646Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10右键管理打不开，提示该文件没有与之关联的程序 …</title>
+    <link href="https://dwqy.github.io/post/4bjc4lvq.html"/>
+    <id>https://dwqy.github.io/post/4bjc4lvq.html</id>
+    <published>2020-02-26T23:57:44.000Z</published>
+    <updated>2020-02-27T00:18:12.646Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>解决方案：</strong></p><p><strong>【 步骤 ① 】</strong> ： 运行<strong>Windows键+R</strong> ，在运行框中输入“<strong>compmgmt.msc</strong>”,然后确定，如果弹出了设备管理器对话框，说明系统文件还未丢失，可以继续下一步。反之如果没有就说明系统文件丢失，需要用其他方式修复。</p><p><strong>【 步骤 ② 】</strong> ： 运行<strong>Windows键+R</strong> ，在运行框中输入“<strong>regedit.exe</strong>”然后点击确定</p><p>【 <strong>步骤 ③</strong> 】 ：在弹出的注册表中依次找到</p><p><strong>HKEY_LOCAL_MACHINE/SOFTWARE/Classes/CLSID/20D04FE0-3AEA-1069-A2D8-08002B30309D /shell/Manage/command</strong></p><p>双击默认选项。把编辑字符串对话框中改为</p><pre><code> mmc.exe %systemroot%\system32\compmgmt.msc /s </code></pre><p>更改成功后故障修复完成。</p><p>（如果更改时候弹出“无法编辑：写该值的新内容时出错”，则先选择“command”选项右键单击权限，点击高级在所有者那里更改自己的电脑账户，并且权限设置为允许完全控制。）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;解决方案：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【 步骤 ① 】&lt;/strong&gt; ： 运行&lt;strong&gt;Windows键+R&lt;/strong&gt; ，在运行框中输入“&lt;strong&gt;compmgmt.msc&lt;/strong&gt;”,然后确定，如果弹出
+      
+    
+    </summary>
+    
+      <category term="桌面运维" scheme="https://dwqy.github.io/categories/%E6%A1%8C%E9%9D%A2%E8%BF%90%E7%BB%B4/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）</title>
