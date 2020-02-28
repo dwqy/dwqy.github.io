@@ -14,7 +14,7 @@
 
 
 
-  <meta name="description" content="win10右键管理打不开，提示该文件没有与之关联的程序 …">
+  <meta name="description" content="c# Winform登陆界面">
 
 
 
@@ -31,21 +31,21 @@
 
 
 
-<link rel="canonical" href="https://dwqy.github.io/post/4bjc4lvq.html">
+<link rel="canonical" href="https://dwqy.github.io/post/uco8d1w6.html">
 
 
-<meta name="description" content="解决方案： 【 步骤 ① 】 ： 运行Windows键+R ，在运行框中输入“compmgmt.msc”,然后确定，如果弹出了设备管理器对话框，说明系统文件还未丢失，可以继续下一步。反之如果没有就说明系统文件丢失，需要用其他方式修复。 【 步骤 ② 】 ： 运行Windows键+R ，在运行框中输入“regedit.exe”然后点击确定 【 步骤 ③ 】 ：在弹出的注册表中依次找到 HKEY_LO">
+<meta name="description" content="要求：登陆界面，用户只有管理员和普通用户       管理员可以进行数据库的增、删、改、查；        普通用户只能进行数据的查询； 思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。 步骤： 1、获取登陆成功的当前用户名； 2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。 具体代码编写： 1、声明一个静态变量，并用来存储当前登陆用户名 public sta">
 <meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="win10右键管理打不开，提示该文件没有与之关联的程序 …">
-<meta property="og:url" content="https://dwqy.github.io/post/4bjc4lvq.html">
+<meta property="og:title" content="c# Winform登陆界面">
+<meta property="og:url" content="https://dwqy.github.io/post/uco8d1w6.html">
 <meta property="og:site_name" content="Xiaoyi">
-<meta property="og:description" content="解决方案： 【 步骤 ① 】 ： 运行Windows键+R ，在运行框中输入“compmgmt.msc”,然后确定，如果弹出了设备管理器对话框，说明系统文件还未丢失，可以继续下一步。反之如果没有就说明系统文件丢失，需要用其他方式修复。 【 步骤 ② 】 ： 运行Windows键+R ，在运行框中输入“regedit.exe”然后点击确定 【 步骤 ③ 】 ：在弹出的注册表中依次找到 HKEY_LO">
+<meta property="og:description" content="要求：登陆界面，用户只有管理员和普通用户       管理员可以进行数据库的增、删、改、查；        普通用户只能进行数据的查询； 思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。 步骤： 1、获取登陆成功的当前用户名； 2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。 具体代码编写： 1、声明一个静态变量，并用来存储当前登陆用户名 public sta">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-02-27T00:18:12.646Z">
+<meta property="og:updated_time" content="2020-02-28T00:24:26.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10右键管理打不开，提示该文件没有与之关联的程序 …">
-<meta name="twitter:description" content="解决方案： 【 步骤 ① 】 ： 运行Windows键+R ，在运行框中输入“compmgmt.msc”,然后确定，如果弹出了设备管理器对话框，说明系统文件还未丢失，可以继续下一步。反之如果没有就说明系统文件丢失，需要用其他方式修复。 【 步骤 ② 】 ： 运行Windows键+R ，在运行框中输入“regedit.exe”然后点击确定 【 步骤 ③ 】 ：在弹出的注册表中依次找到 HKEY_LO">
+<meta name="twitter:title" content="c# Winform登陆界面">
+<meta name="twitter:description" content="要求：登陆界面，用户只有管理员和普通用户       管理员可以进行数据库的增、删、改、查；        普通用户只能进行数据的查询； 思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。 步骤： 1、获取登陆成功的当前用户名； 2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。 具体代码编写： 1、声明一个静态变量，并用来存储当前登陆用户名 public sta">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <title> win10右键管理打不开，提示该文件没有与之关联的程序 … - Xiaoyi </title>
+    <title> c# Winform登陆界面 - Xiaoyi </title>
   </head>
 
   <body>
@@ -146,12 +146,12 @@ var _hmt = _hmt || [];
     <header class="post-header">
       <h1 class="post-title">
         
-          win10右键管理打不开，提示该文件没有与之关联的程序 …
+          c# Winform登陆界面
         
       </h1>
 
       <time class="post-time">
-          2020-02-27
+          2020-02-28
       </time>
     </header>
 
@@ -161,15 +161,26 @@ var _hmt = _hmt || [];
             
 
             <div class="post-content">
-                <p><strong>解决方案：</strong></p>
-<p><strong>【 步骤 ① 】</strong> ： 运行<strong>Windows键+R</strong> ，在运行框中输入“<strong>compmgmt.msc</strong>”,然后确定，如果弹出了设备管理器对话框，说明系统文件还未丢失，可以继续下一步。反之如果没有就说明系统文件丢失，需要用其他方式修复。</p>
-<p><strong>【 步骤 ② 】</strong> ： 运行<strong>Windows键+R</strong> ，在运行框中输入“<strong>regedit.exe</strong>”然后点击确定</p>
-<p>【 <strong>步骤 ③</strong> 】 ：在弹出的注册表中依次找到</p>
-<p><strong>HKEY_LOCAL_MACHINE/SOFTWARE/Classes/CLSID/20D04FE0-3AEA-1069-A2D8-08002B30309D /shell/Manage/command</strong></p>
-<p>双击默认选项。把编辑字符串对话框中改为</p>
-<pre><code> mmc.exe %systemroot%\system32\compmgmt.msc /s 
-</code></pre><p>更改成功后故障修复完成。</p>
-<p>（如果更改时候弹出“无法编辑：写该值的新内容时出错”，则先选择“command”选项右键单击权限，点击高级在所有者那里更改自己的电脑账户，并且权限设置为允许完全控制。）</p>
+                <p>要求：登陆界面，用户只有管理员和普通用户</p>
+<pre><code>      管理员可以进行数据库的增、删、改、查；
+
+      普通用户只能进行数据的查询；
+</code></pre><p>思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。</p>
+<p>步骤：</p>
+<p>1、获取登陆成功的当前用户名；</p>
+<p>2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。</p>
+<p>具体代码编写：</p>
+<p>1、声明一个静态变量，并用来存储当前登陆用户名</p>
+<p>public static string Flag;//静态全局变量</p>
+<p>Flag=txtUserName.text;//要在用户登陆成功的时候对Flag进行赋值，保存当前登陆成功的用户名</p>
+<p>2、在所显示功能界面的Load事件中对Flag进行用户判断</p>
+<p>string Uname=Form.Flag;//把登陆窗体Form中保存的Flag值传递给Uname;</p>
+<p>if(Uname==”普通用户”)</p>
+<p>{</p>
+<p>button.Visible=false;//隐藏button按钮，不显示，实现不同登陆用户不同操作；</p>
+<p>}</p>
+<p>至此，不同登陆用户不同权限功能就实现了。</p>
+<p>最后：希望以后可以用数据库Table表实现不同用户不同权限的功能。</p>
 
             </div>
           
@@ -182,7 +193,7 @@ var _hmt = _hmt || [];
         </li>
         <li class="post-copyright-link">
           <span>本文链接：</span>
-          <a href="https://dwqy.github.io//post/4bjc4lvq.html" title="win10右键管理打不开，提示该文件没有与之关联的程序 …">https://dwqy.github.io/post/4bjc4lvq.html</a>
+          <a href="https://dwqy.github.io//post/uco8d1w6.html" title="c# Winform登陆界面">https://dwqy.github.io/post/uco8d1w6.html</a>
         </li>
         <li class="post-copyright-license">
           <span>版权： </span>
@@ -195,15 +206,15 @@ var _hmt = _hmt || [];
         
   <nav class="post-nav">
     
-      <a class="prev" href="/post/uco8d1w6.html">
+      <a class="prev" href="/post/b6aa8534.html">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">c# Winform登陆界面</span>
+        <span class="prev-text nav-default">使用System.Windows.Forms的</span>
         <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
-      <a class="next" href="/post/VirtualBox-Nat-IpAddress-Repeat.html">
-        <span class="next-text nav-default">Virtual box的nat模式中，（克隆）虚拟机IP地址重复问题（nat模式下虚拟机间的通信）</span>
+      <a class="next" href="/post/4bjc4lvq.html">
+        <span class="next-text nav-default">win10右键管理打不开，提示该文件没有与之关联的程序 …</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

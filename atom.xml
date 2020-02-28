@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-02-27T00:18:12.646Z</updated>
+  <updated>2020-02-28T01:06:13.127Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用System.Windows.Forms的</title>
+    <link href="https://dwqy.github.io/post/b6aa8534.html"/>
+    <id>https://dwqy.github.io/post/b6aa8534.html</id>
+    <published>2020-02-28T01:06:13.000Z</published>
+    <updated>2020-02-28T01:06:13.127Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>c# Winform登陆界面</title>
+    <link href="https://dwqy.github.io/post/uco8d1w6.html"/>
+    <id>https://dwqy.github.io/post/uco8d1w6.html</id>
+    <published>2020-02-28T00:22:43.000Z</published>
+    <updated>2020-02-28T00:24:26.751Z</updated>
+    
+    <content type="html"><![CDATA[<p>要求：登陆界面，用户只有管理员和普通用户</p><pre><code>      管理员可以进行数据库的增、删、改、查；      普通用户只能进行数据的查询；</code></pre><p>思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。</p><p>步骤：</p><p>1、获取登陆成功的当前用户名；</p><p>2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。</p><p>具体代码编写：</p><p>1、声明一个静态变量，并用来存储当前登陆用户名</p><p>public static string Flag;//静态全局变量</p><p>Flag=txtUserName.text;//要在用户登陆成功的时候对Flag进行赋值，保存当前登陆成功的用户名</p><p>2、在所显示功能界面的Load事件中对Flag进行用户判断</p><p>string Uname=Form.Flag;//把登陆窗体Form中保存的Flag值传递给Uname;</p><p>if(Uname==”普通用户”)</p><p>{</p><p>button.Visible=false;//隐藏button按钮，不显示，实现不同登陆用户不同操作；</p><p>}</p><p>至此，不同登陆用户不同权限功能就实现了。</p><p>最后：希望以后可以用数据库Table表实现不同用户不同权限的功能。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;要求：登陆界面，用户只有管理员和普通用户&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      管理员可以进行数据库的增、删、改、查；
+
+      普通用户只能进行数据的查询；
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。&lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>win10右键管理打不开，提示该文件没有与之关联的程序 …</title>
