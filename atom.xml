@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-02-28T01:59:02.816Z</updated>
+  <updated>2020-02-28T02:00:27.572Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用System.Windows.Forms的</title>
+    <title>使用System.Windows.Forms的C#不存在</title>
     <link href="https://dwqy.github.io/post/b6aa8534.html"/>
     <id>https://dwqy.github.io/post/b6aa8534.html</id>
     <published>2020-02-28T01:06:13.000Z</published>
-    <updated>2020-02-28T01:59:02.816Z</updated>
+    <updated>2020-02-28T02:00:27.572Z</updated>
     
     <content type="html"><![CDATA[<p>程序试着添加</p><pre><code>using System.Windows.Forms</code></pre><p>但它给我一个错误。</p><p>解决办法：Visual Studio中请右键单击项目中的References文件夹,选择Add Reference …然后在.NET选项卡上,选择System.Windows.Forms并单击OK.</p>]]></content>
     
@@ -47,7 +47,7 @@
     <link href="https://dwqy.github.io/post/uco8d1w6.html"/>
     <id>https://dwqy.github.io/post/uco8d1w6.html</id>
     <published>2020-02-28T00:22:43.000Z</published>
-    <updated>2020-02-28T01:53:47.240Z</updated>
+    <updated>2020-02-28T02:01:52.414Z</updated>
     
     <content type="html"><![CDATA[<p>要求：登陆界面，用户只有管理员和普通用户</p><pre><code>      管理员可以进行数据库的增、删、改、查；      普通用户只能进行数据的查询；</code></pre><p>思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。</p><p>步骤：</p><p>1、获取登陆成功的当前用户名；</p><p>2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。</p><p>具体代码编写：</p><p>1、声明一个静态变量，并用来存储当前登陆用户名</p><p>public static string Flag;//静态全局变量</p><p>Flag=txtUserName.text;//要在用户登陆成功的时候对Flag进行赋值，保存当前登陆成功的用户名</p><p>2、在所显示功能界面的Load事件中对Flag进行用户判断</p><p>string Uname=Form.Flag;//把登陆窗体Form中保存的Flag值传递给Uname;</p><p>if(Uname==”普通用户”)</p><p>{</p><p>button.Visible=false;//隐藏button按钮，不显示，实现不同登陆用户不同操作；</p><p>}</p><p>至此，不同登陆用户不同权限功能就实现了。</p><p>最后：希望以后可以用数据库Table表实现不同用户不同权限的功能。</p>]]></content>
     
@@ -65,7 +65,7 @@
     
     </summary>
     
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
     
     
   </entry>
@@ -143,7 +143,7 @@
     <link href="https://dwqy.github.io/post/add-com-error-HRESULT%20E_FAIL.html"/>
     <id>https://dwqy.github.io/post/add-com-error-HRESULT E_FAIL.html</id>
     <published>2020-02-20T05:07:45.000Z</published>
-    <updated>2020-02-20T05:09:28.970Z</updated>
+    <updated>2020-02-28T02:01:43.491Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>以管理员身份打开 Developer Command Prompt for VS 2017（vs2017开发人员命令提示符）</p></li><li><p>定位到你的vs2017的安装目录</p><p>例：C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies<br>先输入cd c: 切换到c盘 再cd C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies</p></li><li><p>执行下面的代码</p><pre><code>gacutil -i Microsoft.VisualStudio.Shell.Interop.11.0.dll</code></pre></li></ol>]]></content>
     
@@ -160,7 +160,7 @@
     
     </summary>
     
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
     
     
   </entry>
@@ -190,7 +190,7 @@
     <link href="https://dwqy.github.io/post/ConfigurationManager_NotFound.html"/>
     <id>https://dwqy.github.io/post/ConfigurationManager_NotFound.html</id>
     <published>2020-02-20T03:05:14.000Z</published>
-    <updated>2020-02-20T03:15:44.788Z</updated>
+    <updated>2020-02-28T02:01:05.749Z</updated>
     
     <content type="html"><![CDATA[<p>在创建新的类库时，如果需要用到web.config文件中的数据库连接字符串，但编译的时候系统会提示：</p><p>命名空间“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”(是缺少程序集引用吗?)。<a id="more"></a></p><p>而同样的代码在网站项目（新建网站创建的项目）中却不会出错，</p><p>这主要是在新建的类库项目中没有引用程序集system.configration.dll引起的。</p><p>解决方法：</p><p>在使用System.Configuration的项目中添加引用system.configration。</p>]]></content>
     
@@ -201,7 +201,7 @@
     
     </summary>
     
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
     
     
   </entry>
@@ -211,7 +211,7 @@
     <link href="https://dwqy.github.io/post/h0nw2op8.html"/>
     <id>https://dwqy.github.io/post/h0nw2op8.html</id>
     <published>2019-12-29T22:27:58.000Z</published>
-    <updated>2020-01-03T05:30:47.886Z</updated>
+    <updated>2020-02-28T02:01:31.874Z</updated>
     
     <content type="html"><![CDATA[<div class="excerpt"><br>WinForm的控件介绍<br></div><a id="more"></a><h2 id="四-windows编程"><a href="#四-windows编程" class="headerlink" title="四.windows编程"></a>四.windows编程</h2><h3 id="1-常用控件"><a href="#1-常用控件" class="headerlink" title="1.常用控件"></a>1.常用控件</h3><ul><li><p>控件的介绍</p><p>属性：都有的属性,StartPosition、WindowState、MaximizeBox、MinimizeBox</p><p>事件：Load 、Closing、Closed</p><p>托拽布局</p></li><li><p>Button控件  </p><p>属性：BackgroundImage、BackgroundImageLay</p><p>事件：Click</p></li><li><p>Label LinkLabel控件  </p></li><li><p>TextBox控件  </p><p>属性：Multiline变成多行文本</p></li><li><p>RadioButton控件  </p></li><li><p>CheckBox控件  </p><p>属性：Checked</p><p>事件：CheckedChanged</p></li><li><p>ListBox控件  </p><p>用的比较少</p><p>属性：items</p><p>事件：SelectedIndexChanged</p></li><li><p>ComboBox</p><p>属性：items、DropDownStyle(设置选择的内容是否可选)</p><p>事件：SelectedIndexChanged</p></li><li><p>dateTimePicker</p><p>属性：Format、CustomFormat</p><p>事件：</p></li><li><p>ListView控件  </p></li><li><p>TabControl控件  </p></li><li><p>maskedTextBox</p><p>属性：Mask设置字体格式的</p></li><li><p>label</p></li><li><p>linkLabel</p><p>属性：</p><p>事件：点击事件，比如技术支持，可以调用ie</p></li><li><p>radioButton 单选</p><p>属性：</p><p>方法：</p></li><li><p>pictureBox 插入图片</p></li><li><p>treeView</p></li><li><p>toolTip 鼠标放置指定的控件会提示之前的信息</p></li><li><p>等等</p></li></ul><h3 id="2-WinForm的高级功能"><a href="#2-WinForm的高级功能" class="headerlink" title="2.WinForm的高级功能"></a>2.WinForm的高级功能</h3><ul><li><p>MenuStrip 菜单栏  </p><p>属性：DropDownItems</p><p>事件：单击事件</p></li><li><p>ToolStrip 工具栏  </p><p>属性：Items、DisplayStyle、ToolTipText</p><p>事件：单击事件</p></li><li><p>StatusStrip 状态栏  </p><p>属性：Items 使用需要用form窗体的ContextMenuStrip</p><p>事件：</p></li><li><p>ContextMenuStrip 右键信息</p><p>属性：使用需要用form窗体的ContextMenuStrip进行绑定右键</p><p>事件：</p></li><li><p>TabControl 选项卡</p><p>属性：Dock</p><p>事件：</p></li><li><p>splitContainer 两个Panel</p></li><li><p>Panel</p></li><li><p>GroupBox</p></li><li><p>TableLayoutPanel</p></li><li><p>SDI 单一文档界面  </p></li><li><p>MDI 多文档界面  </p></li></ul>]]></content>
     
@@ -221,7 +221,7 @@
     
     </summary>
     
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
     
     
   </entry>
@@ -231,7 +231,7 @@
     <link href="https://dwqy.github.io/post/80f4lg63.html"/>
     <id>https://dwqy.github.io/post/80f4lg63.html</id>
     <published>2019-12-29T21:44:12.000Z</published>
-    <updated>2019-12-31T02:16:43.884Z</updated>
+    <updated>2020-02-28T02:01:23.210Z</updated>
     
     <content type="html"><![CDATA[<div class="excerpt"><br>C Sharp的基础知识，面向对象<br></div><a id="more"></a><h2 id="三-面向对象"><a href="#三-面向对象" class="headerlink" title="三.面向对象"></a>三.面向对象</h2><h3 id="1-面向对象编程简介"><a href="#1-面向对象编程简介" class="headerlink" title="1.面向对象编程简介"></a>1.面向对象编程简介</h3><ol><li>如何理解对象的概念<ul><li>某种可为人所感知的物质</li><li>思维、感受或动作所作用的物质或者精神载体</li><li>万物皆是对象</li></ul></li><li>C#中的对象是从类型中创建的。<ul><li>对象的类型在面向对象编程中有一个特殊的名称：类</li><li>“类”和“对象”是完全不同的两个概念</li><li>类是我们炒菜的菜谱，对象就是炒出来的菜</li><li>类是抽象的，对象是具体的</li></ul></li></ol><h3 id="2-定义类及类成员"><a href="#2-定义类及类成员" class="headerlink" title="2.定义类及类成员"></a>2.定义类及类成员</h3><ol><li><p>常量</p><p>与类关联的常数值</p></li><li><p>字段</p><p>类的变量</p><p>vs中一个长方块图标</p></li><li><p>方法</p><p>类可执行的计算和操作</p><p>vs中一个扳手图标正方形</p></li><li><p>属性</p><p>与读写类的命名属性相关联的操作</p><p>vs中一个扳手图标</p></li><li><p>运算符</p><p>类所支持的转换和表达式运算符</p></li><li><p>构造函数</p><p>初始化类的实例或类本身所需的操作</p><ul><li><p>默认构造函数</p><p>默认构造函数不带参数，只能把所有的成员字段初始化为标准的默认值</p></li><li><p>自定义构造函数</p><p>若显示添加了一个带参数的构造函数，则无法使 用不带任何参数的默认构造函数。但是此时我们 可以显式添加一个默认构造函数。</p></li><li><p>静态构造函数</p><p>静态构造函数没有参数和访问修饰符，只执行一 次。</p><p>一个类只能有一个静态构造函数。</p><p>静态构造函数只能访问类的静态成员，不能访问 实例成员。</p><p>无参数的实例构造函数和静态构造函数可以在同 一个类中同时定义。虽然参数列表相同，但二者 并不矛盾</p></li></ul></li></ol>]]></content>
     
@@ -241,7 +241,7 @@
     
     </summary>
     
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
     
     
   </entry>
@@ -271,7 +271,7 @@
     <link href="https://dwqy.github.io/post/ivt7m1ve.html"/>
     <id>https://dwqy.github.io/post/ivt7m1ve.html</id>
     <published>2019-12-29T07:29:29.000Z</published>
-    <updated>2019-12-29T08:43:40.385Z</updated>
+    <updated>2020-02-28T02:01:13.882Z</updated>
     
     <content type="html"><![CDATA[<div class="excerpt"><br>C Sharp的基础知识，包括变量和表达式、逻辑控制、变量的扩展、函数、调试和错误处理<br></div><a id="more"></a><h2 id="一-初识C"><a href="#一-初识C" class="headerlink" title="一.初识C"></a>一.初识C</h2><h3 id="1-开始学习前的准备"><a href="#1-开始学习前的准备" class="headerlink" title="1.开始学习前的准备"></a>1.开始学习前的准备</h3><ol><li><p>C#简介</p><p>C#语言介绍，.NET Framework简介，开发工具Visual Studio介绍</p></li><li><p>C#语言用途</p><p>winform、webform、web servier、游戏开发Unity</p></li><li><p>vs2010的安装</p></li></ol><h2 id="二-编程语言基础"><a href="#二-编程语言基础" class="headerlink" title="二.编程语言基础"></a>二.编程语言基础</h2><h3 id="1-变量和表达式"><a href="#1-变量和表达式" class="headerlink" title="1.变量和表达式"></a>1.变量和表达式</h3><ol><li><p>编写第一个C#程序</p><p>创建了一个winform程序，输出helloworld</p><p>了解vs的大致结构</p></li><li><p>C#的基本语法说明</p><ul><li>代码以分号结束</li><li>代码缩进格式</li><li>代码注释方式：多行和单号</li><li>#region代码块</li></ul></li><li><p>变量和表达式</p><ul><li>简单类型：sbyte、byte、short、ushort、uint、long和ulong、int、float double decimal、string、bool、char</li></ul></li><li><p>变量的命名规则</p><p>开头第一个字母必须是：字母、下划线、@符号中任意的一个，后面的字符可以是字母 下划线或者是数字，不可以以数字开头</p></li><li><p>变量的声明和赋值</p><p>使用变量前需要先进行初始化  </p><p>相同类型的两个变量，声明时可以用逗号进行分<br>隔。例如：int age,size;  </p></li><li><p>表达式</p><ul><li><p>数学运算</p><p>++、–、+、-、*、/、%、三元？</p></li><li><p>赋值运算</p><p>=、+=、-=、*=、/=、%=</p></li></ul></li></ol><h3 id="2-逻辑控制"><a href="#2-逻辑控制" class="headerlink" title="2.逻辑控制"></a>2.逻辑控制</h3><ol><li><p>布尔逻辑</p><p>字符串类型：==、!=</p><p>数字类型：==、!=、&gt;、&gt;=、&lt;、&lt;=</p><p>布尔条件运算符：||、&amp;&amp;</p></li><li><p>分支</p><p>三元运算符：? :</p><p>if语句</p><p>switch语句</p><p>循环语句：do、while、for</p><p>循环的中断：break、continue、return</p></li></ol><h3 id="3-关于变量的扩展"><a href="#3-关于变量的扩展" class="headerlink" title="3.关于变量的扩展"></a>3.关于变量的扩展</h3><ol><li><p>类型转换</p><p>隐式转换：系统自动转，一般都是小转大</p><p>显示转换：需要手动转换 ，使用Convert命令</p></li><li><p>枚举</p><p>枚举是具有一组命名常量的独特的值类型</p></li><li><p>结构</p></li><li><p>数组</p><p>数组是一个变量的索引列表</p></li><li><p>对字符串的处理</p><ul><li><p>ToLower() 转小写  </p></li><li><p>ToUpper() 转大写  </p></li><li><p>Trim() 去掉空格  </p></li><li><p>PadLeft() PadRight() 在左边/右边添加空格或者字符串</p></li><li><p>Replace() 替换字符  </p></li><li><p>Remove() 删除字符  </p></li><li><p>Substring() 字符串提取  </p></li><li><p>IndexOf() 获取指定的字符串的开始索引  </p></li><li><p>Equals() 是否相等  </p></li><li><p>Contains() 判断是否存在  </p></li><li><p>EndsWith,StartsWith() 判断字符串的开始或结束  </p></li></ul></li></ol><h3 id="4-函数"><a href="#4-函数" class="headerlink" title="4.函数"></a>4.函数</h3><ol><li><p>定义函数</p><ul><li>定义函数使用static 和 void 关键字 后面是函数的名字  </li><li>函数的名字使用一对小括号 ()  </li><li>函数中是一个句或者几句代码组成的一个代码片段</li><li>函数可以有返回值 有返回值的函数 用返回值的类型代替void关键字  </li><li>函数也可以有参数 参数写在定义函数时函数名字后面的小括号中，如果有多个参数，使用逗号隔开，参数可以是不同的数据类型。  参数中可以带有ref和out关键字</li></ul></li><li><p>使用函数</p><ul><li>在函数外调用函数的名字就可以使用函数  </li><li>调用有参数的函数时，必须使提供的参数与函数定义时指定的参数完全匹配，包括类型，数量，顺序。  </li></ul></li><li><p>变量的作用范围</p></li><li><p>函数的重载</p><p>函数名字相同，但是参数不同，叫做函数的重载  </p><p>函数参数相同，返回值不同，也是函数的重载  </p></li></ol><h3 id="5-调试和错误处理"><a href="#5-调试和错误处理" class="headerlink" title="5.调试和错误处理"></a>5.调试和错误处理</h3><ol><li><p>语法错误</p><p>写好后就会提示</p></li><li><p>逻辑错误</p><p>程序运行后才会发现的</p></li><li><p>使用vs调试代码</p><p>添加断点进行调试</p></li><li><p>错误处理</p><ul><li>能够预料到可能发生的错误时，提前将错误处理掉。避免程序崩溃。  </li><li>错误处理使用 try…catch…finally  </li></ul></li></ol>]]></content>
     
@@ -281,7 +281,7 @@
     
     </summary>
     
-      <category term="C Sharp" scheme="https://dwqy.github.io/categories/C-Sharp/"/>
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
     
     
   </entry>
