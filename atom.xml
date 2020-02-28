@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-02-28T01:06:13.127Z</updated>
+  <updated>2020-02-28T01:43:45.921Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://dwqy.github.io/post/b6aa8534.html"/>
     <id>https://dwqy.github.io/post/b6aa8534.html</id>
     <published>2020-02-28T01:06:13.000Z</published>
-    <updated>2020-02-28T01:06:13.127Z</updated>
+    <updated>2020-02-28T01:43:45.921Z</updated>
     
     <summary type="html">
     
@@ -31,11 +31,11 @@
   </entry>
   
   <entry>
-    <title>c# Winform登陆界面</title>
+    <title>c# Winform登陆界面设计，登陆用户不同权限设置</title>
     <link href="https://dwqy.github.io/post/uco8d1w6.html"/>
     <id>https://dwqy.github.io/post/uco8d1w6.html</id>
     <published>2020-02-28T00:22:43.000Z</published>
-    <updated>2020-02-28T00:24:26.751Z</updated>
+    <updated>2020-02-28T01:47:53.401Z</updated>
     
     <content type="html"><![CDATA[<p>要求：登陆界面，用户只有管理员和普通用户</p><pre><code>      管理员可以进行数据库的增、删、改、查；      普通用户只能进行数据的查询；</code></pre><p>思路：当登陆用户为普通用户的时候，把数据库增删改查功能隐藏。</p><p>步骤：</p><p>1、获取登陆成功的当前用户名；</p><p>2、在所要显示功能界面的Load事件中进行判定（一定要在Load事件下）。</p><p>具体代码编写：</p><p>1、声明一个静态变量，并用来存储当前登陆用户名</p><p>public static string Flag;//静态全局变量</p><p>Flag=txtUserName.text;//要在用户登陆成功的时候对Flag进行赋值，保存当前登陆成功的用户名</p><p>2、在所显示功能界面的Load事件中对Flag进行用户判断</p><p>string Uname=Form.Flag;//把登陆窗体Form中保存的Flag值传递给Uname;</p><p>if(Uname==”普通用户”)</p><p>{</p><p>button.Visible=false;//隐藏button按钮，不显示，实现不同登陆用户不同操作；</p><p>}</p><p>至此，不同登陆用户不同权限功能就实现了。</p><p>最后：希望以后可以用数据库Table表实现不同用户不同权限的功能。</p>]]></content>
     
@@ -52,6 +52,29 @@
       
     
     </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>win10 账号登陆错误报错误码0x80190001</title>
+    <link href="https://dwqy.github.io/post/OneNote-Login-Error-0x80190001.html"/>
+    <id>https://dwqy.github.io/post/OneNote-Login-Error-0x80190001.html</id>
+    <published>2020-02-27T05:36:08.000Z</published>
+    <updated>2020-02-28T01:46:44.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决办法：进行Internet Explorer重置<br>1.在Internet Explorer浏览器的右上角点击设置，打开“Internet选项”。<br>2.在“Internet选项”界面，进入“常规”，单击“删除”，再点击“确定”，缓存文件就已经全部删除。<br>3.在“Internet选项”界面，进入“高级”， 单击 “重置”，即可。</p><p>按Windows+R输入services.msc找到Microsoft Account Sign-in Assistant右键启动是否正常。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;解决办法：进行Internet Explorer重置&lt;br&gt;1.在Internet Explorer浏览器的右上角点击设置，打开“Internet选项”。&lt;br&gt;2.在“Internet选项”界面，进入“常规”，单击“删除”，再点击“确定”，缓存文件就已经全部删除。&lt;br&gt;
+      
+    
+    </summary>
+    
+      <category term="桌面运维" scheme="https://dwqy.github.io/categories/%E6%A1%8C%E9%9D%A2%E8%BF%90%E7%BB%B4/"/>
     
     
   </entry>
