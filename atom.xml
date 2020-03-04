@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-03-03T08:48:06.384Z</updated>
+  <updated>2020-03-04T06:15:48.311Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>找不到资产文件“xxxx\obj\pro</title>
+    <link href="https://dwqy.github.io/post/8g1upzfw.html"/>
+    <id>https://dwqy.github.io/post/8g1upzfw.html</id>
+    <published>2020-03-04T06:12:12.000Z</published>
+    <updated>2020-03-04T06:15:48.311Z</updated>
+    
+    <content type="html"><![CDATA[<p>vs2019的使用过程中，可能原因是当时移除了项目，又删除了导致的。</p><p>切换到当前的项目运行以下命令：</p><pre><code>dotnet restore</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;vs2019的使用过程中，可能原因是当时移除了项目，又删除了导致的。&lt;/p&gt;
+&lt;p&gt;切换到当前的项目运行以下命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dotnet restore
+&lt;/code&gt;&lt;/pre&gt;
+      
+    
+    </summary>
+    
+      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>如何将代码通过vs2019加载到GitHub</title>
