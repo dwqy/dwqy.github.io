@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-03-04T06:15:48.311Z</updated>
+  <updated>2020-03-06T07:31:44.901Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>局域网反向代理tcp协议</title>
+    <link href="https://dwqy.github.io/post/LAN-proxy.html"/>
+    <id>https://dwqy.github.io/post/LAN-proxy.html</id>
+    <published>2020-03-06T07:24:08.000Z</published>
+    <updated>2020-03-06T07:31:44.901Z</updated>
+    
+    <content type="html"><![CDATA[<p>华为云试用了15天，由于局域网的向日葵一直不是特别问题。自己刚好有台vps就萌生了内网映射。</p><p>一开始使用的frp，但是设置了没用。</p><p>后来在joyqi找到了个反向代理的工具，起初使用了公网IP也没用。后来看了下文章的评论，使用了ifconfig显示的内网地址作为命令</p><p>server</p><pre><code>socket-pipe -l 192.168.0.44@18888 -r 192.168.0.44@8888 -t tserver</code></pre><p>client</p><pre><code>socket-pipe -l 127.0.0.1@3389 -r 121.36.9.119@18888 -t tclient</code></pre><p>server使用的是CentOS,让命令常驻后台</p><pre><code>nohup socket-pipe -l 192.168.0.44@18888 -r 192.168.0.44@8888 -t tserver &amp;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;华为云试用了15天，由于局域网的向日葵一直不是特别问题。自己刚好有台vps就萌生了内网映射。&lt;/p&gt;
+&lt;p&gt;一开始使用的frp，但是设置了没用。&lt;/p&gt;
+&lt;p&gt;后来在joyqi找到了个反向代理的工具，起初使用了公网IP也没用。后来看了下文章的评论，使用了ifconfig显示
+      
+    
+    </summary>
+    
+      <category term="桌面运维" scheme="https://dwqy.github.io/categories/%E6%A1%8C%E9%9D%A2%E8%BF%90%E7%BB%B4/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>找不到资产文件“xxxx\obj\pro</title>
