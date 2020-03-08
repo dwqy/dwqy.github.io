@@ -14,7 +14,7 @@
 
 
 
-  <meta name="description" content="C Sharp桌面程序开发1">
+  <meta name="description" content="Mac安装linux mssql">
 
 
 
@@ -31,21 +31,21 @@
 
 
 
-<link rel="canonical" href="https://dwqy.github.io/post/h0nw2op8.html">
+<link rel="canonical" href="https://dwqy.github.io/post/Mac-Docker-install-Mssql.html">
 
 
-<meta name="description" content="WinForm的控件介绍">
+<meta name="description" content="为了操作方便，在mac上也可以安装mssql，需要借助docker，之前都是vmware或者visualbox安装windows再装mssql，现在这样方便了。  mac安装docker  安装Kitematic,这个是可视版的，主页搜索mssql即可进行安装（这里需要翻墙）  下载好的mssql运行需要设置两个参数 ACCEPT_EULA=Y SA_PASSWORD=G1veMeP@ss 其中对">
 <meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C Sharp桌面程序开发1">
-<meta property="og:url" content="https://dwqy.github.io/post/h0nw2op8.html">
+<meta property="og:title" content="Mac安装linux mssql">
+<meta property="og:url" content="https://dwqy.github.io/post/Mac-Docker-install-Mssql.html">
 <meta property="og:site_name" content="Xiaoyi">
-<meta property="og:description" content="WinForm的控件介绍">
+<meta property="og:description" content="为了操作方便，在mac上也可以安装mssql，需要借助docker，之前都是vmware或者visualbox安装windows再装mssql，现在这样方便了。  mac安装docker  安装Kitematic,这个是可视版的，主页搜索mssql即可进行安装（这里需要翻墙）  下载好的mssql运行需要设置两个参数 ACCEPT_EULA=Y SA_PASSWORD=G1veMeP@ss 其中对">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-02-28T02:01:31.874Z">
+<meta property="og:updated_time" content="2020-03-08T09:10:06.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C Sharp桌面程序开发1">
-<meta name="twitter:description" content="WinForm的控件介绍">
+<meta name="twitter:title" content="Mac安装linux mssql">
+<meta name="twitter:description" content="为了操作方便，在mac上也可以安装mssql，需要借助docker，之前都是vmware或者visualbox安装windows再装mssql，现在这样方便了。  mac安装docker  安装Kitematic,这个是可视版的，主页搜索mssql即可进行安装（这里需要翻墙）  下载好的mssql运行需要设置两个参数 ACCEPT_EULA=Y SA_PASSWORD=G1veMeP@ss 其中对">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <title> C Sharp桌面程序开发1 - Xiaoyi </title>
+    <title> Mac安装linux mssql - Xiaoyi </title>
   </head>
 
   <body>
@@ -146,12 +146,12 @@ var _hmt = _hmt || [];
     <header class="post-header">
       <h1 class="post-title">
         
-          C Sharp桌面程序开发1
+          Mac安装linux mssql
         
       </h1>
 
       <time class="post-time">
-          2019-12-30
+          2020-03-08
       </time>
     </header>
 
@@ -159,109 +159,20 @@ var _hmt = _hmt || [];
 
     
             
-  <div class="toc-container">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#四-windows编程"><span class="toc-text">四.windows编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-常用控件"><span class="toc-text">1.常用控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-WinForm的高级功能"><span class="toc-text">2.WinForm的高级功能</span></a></li></ol></li></ol>
-  </div> 
-
 
             <div class="post-content">
-                <div class="excerpt"><br>WinForm的控件介绍<br></div>
-
-<a id="more"></a>
-<h2 id="四-windows编程"><a href="#四-windows编程" class="headerlink" title="四.windows编程"></a>四.windows编程</h2><h3 id="1-常用控件"><a href="#1-常用控件" class="headerlink" title="1.常用控件"></a>1.常用控件</h3><ul>
-<li><p>控件的介绍</p>
-<p>属性：都有的属性,StartPosition、WindowState、MaximizeBox、MinimizeBox</p>
-<p>事件：Load 、Closing、Closed</p>
-<p>托拽布局</p>
+                <p>为了操作方便，在mac上也可以安装mssql，需要借助docker，之前都是vmware或者visualbox安装windows再装mssql，现在这样方便了。</p>
+<ol>
+<li><p>mac安装docker</p>
 </li>
-<li><p>Button控件  </p>
-<p>属性：BackgroundImage、BackgroundImageLay</p>
-<p>事件：Click</p>
+<li><p>安装Kitematic,这个是可视版的，主页搜索mssql即可进行安装（这里需要翻墙）</p>
 </li>
-<li><p>Label LinkLabel控件  </p>
+<li><p>下载好的mssql运行需要设置两个参数</p>
+<pre><code>ACCEPT_EULA=Y
+SA_PASSWORD=G1veMeP@ss
+</code></pre><p>其中对应的端口本机和docker都改成1433.</p>
 </li>
-<li><p>TextBox控件  </p>
-<p>属性：Multiline变成多行文本</p>
-</li>
-<li><p>RadioButton控件  </p>
-</li>
-<li><p>CheckBox控件  </p>
-<p>属性：Checked</p>
-<p>事件：CheckedChanged</p>
-</li>
-<li><p>ListBox控件  </p>
-<p>用的比较少</p>
-<p>属性：items</p>
-<p>事件：SelectedIndexChanged</p>
-</li>
-<li><p>ComboBox</p>
-<p>属性：items、DropDownStyle(设置选择的内容是否可选)</p>
-<p>事件：SelectedIndexChanged</p>
-</li>
-<li><p>dateTimePicker</p>
-<p>属性：Format、CustomFormat</p>
-<p>事件：</p>
-</li>
-<li><p>ListView控件  </p>
-</li>
-<li><p>TabControl控件  </p>
-</li>
-<li><p>maskedTextBox</p>
-<p>属性：Mask设置字体格式的</p>
-</li>
-<li><p>label</p>
-</li>
-<li><p>linkLabel</p>
-<p>属性：</p>
-<p>事件：点击事件，比如技术支持，可以调用ie</p>
-</li>
-<li><p>radioButton 单选</p>
-<p>属性：</p>
-<p>方法：</p>
-</li>
-<li><p>pictureBox 插入图片</p>
-</li>
-<li><p>treeView</p>
-</li>
-<li><p>toolTip 鼠标放置指定的控件会提示之前的信息</p>
-</li>
-<li><p>等等</p>
-</li>
-</ul>
-<h3 id="2-WinForm的高级功能"><a href="#2-WinForm的高级功能" class="headerlink" title="2.WinForm的高级功能"></a>2.WinForm的高级功能</h3><ul>
-<li><p>MenuStrip 菜单栏  </p>
-<p>属性：DropDownItems</p>
-<p>事件：单击事件</p>
-</li>
-<li><p>ToolStrip 工具栏  </p>
-<p>属性：Items、DisplayStyle、ToolTipText</p>
-<p>事件：单击事件</p>
-</li>
-<li><p>StatusStrip 状态栏  </p>
-<p>属性：Items 使用需要用form窗体的ContextMenuStrip</p>
-<p>事件：</p>
-</li>
-<li><p>ContextMenuStrip 右键信息</p>
-<p>属性：使用需要用form窗体的ContextMenuStrip进行绑定右键</p>
-<p>事件：</p>
-</li>
-<li><p>TabControl 选项卡</p>
-<p>属性：Dock</p>
-<p>事件：</p>
-</li>
-<li><p>splitContainer 两个Panel</p>
-</li>
-<li><p>Panel</p>
-</li>
-<li><p>GroupBox</p>
-</li>
-<li><p>TableLayoutPanel</p>
-</li>
-<li><p>SDI 单一文档界面  </p>
-</li>
-<li><p>MDI 多文档界面  </p>
-</li>
-</ul>
+</ol>
 
             </div>
           
@@ -274,7 +185,7 @@ var _hmt = _hmt || [];
         </li>
         <li class="post-copyright-link">
           <span>本文链接：</span>
-          <a href="https://dwqy.github.io//post/h0nw2op8.html" title="C Sharp桌面程序开发1">https://dwqy.github.io/post/h0nw2op8.html</a>
+          <a href="https://dwqy.github.io//post/Mac-Docker-install-Mssql.html" title="Mac安装linux mssql">https://dwqy.github.io/post/Mac-Docker-install-Mssql.html</a>
         </li>
         <li class="post-copyright-license">
           <span>版权： </span>
@@ -287,15 +198,9 @@ var _hmt = _hmt || [];
         
   <nav class="post-nav">
     
-      <a class="prev" href="/post/ConfigurationManager_NotFound.html">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">“System.Configuration”中不存在类型或命名空间名称“ConfigurationManager”错误的解决方法</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/post/5kkeii4m.html">
-        <span class="next-text nav-default">MarkDown快速入门</span>
+      <a class="next" href="/post/LAN-proxy.html">
+        <span class="next-text nav-default">局域网反向代理tcp协议</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
