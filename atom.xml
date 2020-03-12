@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-03-12T04:55:46.569Z</updated>
+  <updated>2020-03-12T05:09:38.725Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Win10安装.net3.5 出现错误代码0x800f0922 解决方法</title>
-    <link href="https://dwqy.github.io/post/win10-install-.net3.5-error-0x800f0922.html"/>
-    <id>https://dwqy.github.io/post/win10-install-.net3.5-error-0x800f0922.html</id>
+    <link href="https://dwqy.github.io/post/win10-install-net3.5-error-0x800f0922.html"/>
+    <id>https://dwqy.github.io/post/win10-install-net3.5-error-0x800f0922.html</id>
     <published>2020-03-12T04:53:59.000Z</published>
-    <updated>2020-03-12T04:55:46.569Z</updated>
+    <updated>2020-03-12T05:09:38.725Z</updated>
     
     <content type="html"><![CDATA[<p>看到很多人在Win10/Win8上安装.net 3.5都会报这个错，然而网上的答案并不靠谱，所以笔者这里提供一个正确的打开方式。</p><ol><li>按Win+X——程序和功能——左侧的启用或关闭功能</li><li>去掉.net 4.6的勾选，点确定，等待完成</li><li>重复第1步，勾选.net 3.5，点确定，等待完成</li><li>重复第1步，勾选.net 4.6，点确定，等待完成。</li><li>大功告成。</li></ol>]]></content>
     
