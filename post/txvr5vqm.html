@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta name="google-site-verification" content="DwDg4EuywHWNZUkTC7sG0WGv_UQekM4uRtOoaGuDJHc">
+<meta name="baidu-site-verification" content="hkLiBHH93D">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="frp内网无法穿透解决">
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaoyi">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://dwqy.github.io/post/txvr5vqm.html">
+
+
+<meta name="description" content="使用了华为云的vps，使用frp穿透，但是没成功，后来用了家里的电脑就可以，以为是内部网络问题就没法解决了，后来想是否可以加密协议来不让内部防火墙识别到，真被找到了，以下是转载 为了在家调试方便，老高使用frp将自己放在公司的开发机器的ssh端口开放出来了，但是配置frp客户端的过程中总是出现下面的一句话： 2019/08/30 23:42:47 [W] [service.go:82] login">
+<meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="frp内网无法穿透解决">
+<meta property="og:url" content="https://dwqy.github.io/post/txvr5vqm.html">
+<meta property="og:site_name" content="Xiaoyi">
+<meta property="og:description" content="使用了华为云的vps，使用frp穿透，但是没成功，后来用了家里的电脑就可以，以为是内部网络问题就没法解决了，后来想是否可以加密协议来不让内部防火墙识别到，真被找到了，以下是转载 为了在家调试方便，老高使用frp将自己放在公司的开发机器的ssh端口开放出来了，但是配置frp客户端的过程中总是出现下面的一句话： 2019/08/30 23:42:47 [W] [service.go:82] login">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://dwqy.github.io/post/148061091.png">
+<meta property="og:updated_time" content="2020-03-19T03:27:30.504Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="frp内网无法穿透解决">
+<meta name="twitter:description" content="使用了华为云的vps，使用frp穿透，但是没成功，后来用了家里的电脑就可以，以为是内部网络问题就没法解决了，后来想是否可以加密协议来不让内部防火墙识别到，真被找到了，以下是转载 为了在家调试方便，老高使用frp将自己放在公司的开发机器的ssh端口开放出来了，但是配置frp客户端的过程中总是出现下面的一句话： 2019/08/30 23:42:47 [W] [service.go:82] login">
+<meta name="twitter:image" content="https://dwqy.github.io/post/148061091.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+
+  <link href="/plugins/prettify/prettify.css" rel="stylesheet">
+
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b733e1eaeacbf8f87d3be047f28c3973";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <title> frp内网无法穿透解决 - Xiaoyi </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Xiaoyi</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/archives">
+                            
+                            
+                                归档
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/atom.xml">
+                            
+                            
+                                订阅
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          frp内网无法穿透解决
+        
+      </h1>
+
+      <time class="post-time">
+          2020-03-19
+      </time>
+    </header>
+
+
+
+    
+            
+  <div class="toc-container">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地抓包"><span class="toc-text">本地抓包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务端抓包"><span class="toc-text">服务端抓包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决"><span class="toc-text">解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#另一种解决办法"><span class="toc-text">另一种解决办法</span></a></li></ol>
+  </div> 
+
+
+            <div class="post-content">
+                <p>使用了华为云的vps，使用frp穿透，但是没成功，后来用了家里的电脑就可以，以为是内部网络问题就没法解决了，后来想是否可以加密协议来不让内部防火墙识别到，真被找到了，以下是转载</p>
+<p>为了在家调试方便，老高使用frp将自己放在公司的开发机器的ssh端口开放出来了，但是配置frp客户端的过程中总是出现下面的一句话：</p>
+<pre><code>2019/08/30 23:42:47 [W] [service.go:82] login to server failed: EOF
+EOF
+</code></pre><p>开始怀疑是frp的版本问题，于是客户端和服务端都换上了最新的版本，结果还是无法解决问题，继续尝试更换端口，问题依旧。</p>
+<p>网上搜索一圈，发现遇到<code>login to server failed: EOF</code>问题的人还真不少，下面看看老高是如何解决的吧！</p>
+<h2 id="本地抓包"><a href="#本地抓包" class="headerlink" title="本地抓包"></a>本地抓包</h2><p>开启Wireshark，选择网卡，输入过滤规则：</p>
+<pre><code>tcp and ip.addr==xxx.xxx.220.109
+</code></pre><p><img src=".\148061091.png" alt></p>
+<p>后面的那三个RST包<strong>很可疑</strong>，其中还有三个IRC协议的包，打开看一下，发现原来是认证数据。</p>
+<pre><code>{&quot;version&quot;:&quot;0.28.2&quot;,&quot;hostname&quot;:&quot;&quot;,&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;amd64&quot;,&quot;user&quot;:&quot;&quot;,&quot;privilege_key&quot;:&quot;144fa23b09635f403ccd18&quot;,&quot;timestamp&quot;:1567119104,&quot;run_id&quot;:&quot;&quot;,&quot;pool_count&quot;:1}
+
+</code></pre><h2 id="服务端抓包"><a href="#服务端抓包" class="headerlink" title="服务端抓包"></a>服务端抓包</h2><p>打开终端，输入命令</p>
+<pre><code># xxxx 为frp监听端口
+tcpdump -i eth0  port xxxx -n
+
+23:57:54.041136 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [S], seq 2454088299, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 1598952560 ecr 0,sackOK,eol], length 0
+23:57:54.041203 IP xx.xx.xx.xx.PPPP &gt; 180.167.229.162.64674: Flags [S.], seq 2502814427, ack 2454088300, win 65160, options [mss 1460,sackOK,TS val 3508779989 ecr 1598952560,nop,wscale 6], length 0
+23:57:54.171283 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [.], ack 1, win 2058, options [nop,nop,TS val 1598952691 ecr 3508779989], length 0
+23:57:54.171670 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [P.], seq 1:13, ack 1, win 2058, options [nop,nop,TS val 1598952692 ecr 3508779989], length 12
+23:57:54.171694 IP xx.xx.xx.xx.PPPP &gt; 180.167.229.162.64674: Flags [.], ack 13, win 1018, options [nop,nop,TS val 3508780120 ecr 1598952692], length 0
+23:57:54.171896 IP xx.xx.xx.xx.PPPP &gt; 180.167.229.162.64674: Flags [P.], seq 1:13, ack 13, win 1018, options [nop,nop,TS val 3508780120 ecr 1598952692], length 12
+23:57:54.172366 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [P.], seq 13:25, ack 1, win 2058, options [nop,nop,TS val 1598952692 ecr 3508779989], length 12
+23:57:54.172391 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [R.], seq 25, ack 1, win 8224, length 0
+23:57:54.301735 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [R.], seq 13, ack 1, win 8224, length 0
+23:57:54.302089 IP 180.167.229.162.64674 &gt; xx.xx.xx.xx.PPPP: Flags [R.], seq 13, ack 13, win 8224, length 0
+</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>看来公司的防火墙应该是探测到了某些特征流量而触发了规则，导致frp认证的包被重置，于是服务端frp关闭了链接，而翻开<a href="https://github.com/fatedier/frp/blob/e62d9a52429f54dee8df1c42f2d4bad7a267b05d/client/service.go#L221" target="_blank" rel="noopener">源码</a>，我们能看到再发送完认证信息后执行了<code>ReadMsgInto</code>方法，因为连接已经关闭，所以我们就得到了EOF错误！</p>
+<p>回头再看wireshark的RST包之前的三个IRC包，等等，IRC是什么鬼？在FRP源代码中根本搜不到这个关键字啊！从源代码的登录逻辑来看，基本都是TCP的操作。于是再试着抓一次包，IRC又变回了TCP，看来wireshark也有误报的情况发生。</p>
+<p>究其原因，很有可能是这一段明文数据暴露了frp，然后导致被防火墙封杀。</p>
+<p>那么如何解决<code>login to server failed: EOF</code>的问题呢？</p>
+<p>其实看了源代码就知道了，原来frp在v0.25.0版本后增加了一个客户端选项，支持了tls传输，也就是传说中的非对称加密，原来在frps初始化服务时，在内存中已经为我们生成了一个<a href="https://github.com/fatedier/frp/blob/e62d9a52429f54dee8df1c42f2d4bad7a267b05d/server/service.go#L417" target="_blank" rel="noopener">简易的TLS服务</a>，简直完美！</p>
+<p>开启的办法很简单，在客户端原来的<code>[common]</code>配置中加入<code>tls_enable = true</code>即可!</p>
+<h2 id="另一种解决办法"><a href="#另一种解决办法" class="headerlink" title="另一种解决办法"></a>另一种解决办法</h2><p>其实嘛，还有一种解决办法，但是不一定能行，而且可能会带来一些问题！</p>
+<p>什么方法呢？既然防火墙检测了我的<code>tcp</code>，那我换成<code>udp</code>行不行？</p>
+<p>frp支持使用kcp作为底层的通讯协议，而kcp默认就是基于<code>udp</code>协议，废话不多说，赶紧试一试！</p>
+<p>步骤(假设kcp的端口为7000)：</p>
+<ol>
+<li>在<strong>服务端</strong>原来的<code>[common]</code>配置中加入<code>kcp_bind_port = 7000</code>，使其支持udp</li>
+<li>在<strong>客户端</strong>原来的<code>[common]</code>处加入<code>protocol = kcp</code>即可，注意端口一定要对上！</li>
+</ol>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+      <ul class="post-copyright">
+        <li class="post-copyright-author">
+            <span>本文作者：</span>Xiaoyi
+        </li>
+        <li class="post-copyright-link">
+          <span>本文链接：</span>
+          <a href="https://dwqy.github.io//post/txvr5vqm.html" title="frp内网无法穿透解决">https://dwqy.github.io/post/txvr5vqm.html</a>
+        </li>
+        <li class="post-copyright-license">
+          <span>版权： </span>
+          本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+        </li>
+      </ul>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/post/win10-install-net3.5-error-0x800f0922.html">
+        <span class="next-text nav-default">Win10安装.net3.5 出现错误代码0x800f0922 解决方法</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+      
+        
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+    <div id="gitalk-container"></div>
+
+    <script>
+        var gitalk = new Gitalk({
+            clientID: 'ca4ae20760cf27ad5c6c',
+            clientSecret: '671788fb8d6aed08906b70340a8ba3088ec03f39',
+            repo: 'gd4Ark.github.io',
+            owner: 'gd4Ark',
+            admin: 'gd4Ark',
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: 'false'  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+      
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2019 -
+    
+    2020
+    <span class="footer-author">Xiaoyi.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+<!--prettify代码高亮脚本引入-->
+
+    <script src="/plugins/prettify/prettify.js"></script>
+    <script type="text/javascript">
+    jQuery(function($){
+        $('pre').addClass('prettyprint');
+        prettyPrint();
+    });
+    </script>
+
+
+  </body>
+</html>
