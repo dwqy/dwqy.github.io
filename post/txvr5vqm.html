@@ -42,12 +42,12 @@
 <meta property="og:site_name" content="Xiaoyi">
 <meta property="og:description" content="使用了华为云的vps，使用frp穿透，但是没成功，后来用了家里的电脑就可以，以为是内部网络问题就没法解决了，后来想是否可以加密协议来不让内部防火墙识别到，真被找到了，以下是转载 为了在家调试方便，老高使用frp将自己放在公司的开发机器的ssh端口开放出来了，但是配置frp客户端的过程中总是出现下面的一句话： 2019/08/30 23:42:47 [W] [service.go:82] login">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="https://dwqy.github.io/post/148061091.png">
-<meta property="og:updated_time" content="2020-03-19T03:27:30.504Z">
+<meta property="og:image" content="https://dwqy.github.io/post/txvr5vqm/148061091.png">
+<meta property="og:updated_time" content="2020-03-19T04:00:16.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="frp内网无法穿透解决">
 <meta name="twitter:description" content="使用了华为云的vps，使用frp穿透，但是没成功，后来用了家里的电脑就可以，以为是内部网络问题就没法解决了，后来想是否可以加密协议来不让内部防火墙识别到，真被找到了，以下是转载 为了在家调试方便，老高使用frp将自己放在公司的开发机器的ssh端口开放出来了，但是配置frp客户端的过程中总是出现下面的一句话： 2019/08/30 23:42:47 [W] [service.go:82] login">
-<meta name="twitter:image" content="https://dwqy.github.io/post/148061091.png">
+<meta name="twitter:image" content="https://dwqy.github.io/post/txvr5vqm/148061091.png">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
@@ -175,7 +175,7 @@ EOF
 <p>网上搜索一圈，发现遇到<code>login to server failed: EOF</code>问题的人还真不少，下面看看老高是如何解决的吧！</p>
 <h2 id="本地抓包"><a href="#本地抓包" class="headerlink" title="本地抓包"></a>本地抓包</h2><p>开启Wireshark，选择网卡，输入过滤规则：</p>
 <pre><code>tcp and ip.addr==xxx.xxx.220.109
-</code></pre><p><img src=".\148061091.png" alt></p>
+</code></pre><p><img src="/post/txvr5vqm/148061091.png" alt></p>
 <p>后面的那三个RST包<strong>很可疑</strong>，其中还有三个IRC协议的包，打开看一下，发现原来是认证数据。</p>
 <pre><code>{&quot;version&quot;:&quot;0.28.2&quot;,&quot;hostname&quot;:&quot;&quot;,&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;amd64&quot;,&quot;user&quot;:&quot;&quot;,&quot;privilege_key&quot;:&quot;144fa23b09635f403ccd18&quot;,&quot;timestamp&quot;:1567119104,&quot;run_id&quot;:&quot;&quot;,&quot;pool_count&quot;:1}
 
