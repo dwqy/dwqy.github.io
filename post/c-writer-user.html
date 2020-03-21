@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta name="google-site-verification" content="DwDg4EuywHWNZUkTC7sG0WGv_UQekM4uRtOoaGuDJHc">
+<meta name="baidu-site-verification" content="hkLiBHH93D">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="如何解决C盘根目录无法创建或写入文件">
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaoyi">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://dwqy.github.io/post/c-writer-user.html">
+
+
+<meta name="description" content="eos中打开报表会在c盘中创建一个临时问题，加域的电脑或者是user权限的就无法打开，之前添加everyone和当前域用户都无法解决，原来只要添加user的全完权限即可。 解决办法1：用管理员运行cmd 输入 icacls c:\ /setintegritylevel M 解决办法2：  选中C盘 点右键选中属性（properties） 选“安全”（Security） Tab Users “编辑”">
+<meta name="keywords" content="Xiaoyi 个人博客 hexo 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何解决C盘根目录无法创建或写入文件">
+<meta property="og:url" content="https://dwqy.github.io/post/c-writer-user.html">
+<meta property="og:site_name" content="Xiaoyi">
+<meta property="og:description" content="eos中打开报表会在c盘中创建一个临时问题，加域的电脑或者是user权限的就无法打开，之前添加everyone和当前域用户都无法解决，原来只要添加user的全完权限即可。 解决办法1：用管理员运行cmd 输入 icacls c:\ /setintegritylevel M 解决办法2：  选中C盘 点右键选中属性（properties） 选“安全”（Security） Tab Users “编辑”">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2020-03-21T05:46:23.523Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何解决C盘根目录无法创建或写入文件">
+<meta name="twitter:description" content="eos中打开报表会在c盘中创建一个临时问题，加域的电脑或者是user权限的就无法打开，之前添加everyone和当前域用户都无法解决，原来只要添加user的全完权限即可。 解决办法1：用管理员运行cmd 输入 icacls c:\ /setintegritylevel M 解决办法2：  选中C盘 点右键选中属性（properties） 选“安全”（Security） Tab Users “编辑”">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+
+  <link href="/plugins/prettify/prettify.css" rel="stylesheet">
+
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b733e1eaeacbf8f87d3be047f28c3973";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <title> 如何解决C盘根目录无法创建或写入文件 - Xiaoyi </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Xiaoyi</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/archives">
+                            
+                            
+                                归档
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    
+                        <li class="menu-item">
+                    
+                        <a href="/atom.xml">
+                            
+                            
+                                订阅
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          如何解决C盘根目录无法创建或写入文件
+        
+      </h1>
+
+      <time class="post-time">
+          2020-03-21
+      </time>
+    </header>
+
+
+
+    
+            
+
+            <div class="post-content">
+                <p>eos中打开报表会在c盘中创建一个临时问题，加域的电脑或者是user权限的就无法打开，之前添加everyone和当前域用户都无法解决，原来只要添加user的全完权限即可。</p>
+<p>解决办法1：用管理员运行cmd 输入</p>
+<p>icacls c:\ /setintegritylevel M</p>
+<p>解决办法2：</p>
+<ol>
+<li>选中C盘</li>
+<li>点右键选中属性（properties）</li>
+<li>选“安全”（Security） Tab</li>
+<li>Users</li>
+<li>“编辑”（Edit）</li>
+<li>‘Full Control’</li>
+<li>‘Apply’</li>
+<li>‘OK’</li>
+</ol>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+      <ul class="post-copyright">
+        <li class="post-copyright-author">
+            <span>本文作者：</span>Xiaoyi
+        </li>
+        <li class="post-copyright-link">
+          <span>本文链接：</span>
+          <a href="https://dwqy.github.io//post/c-writer-user.html" title="如何解决C盘根目录无法创建或写入文件">https://dwqy.github.io/post/c-writer-user.html</a>
+        </li>
+        <li class="post-copyright-license">
+          <span>版权： </span>
+          本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+        </li>
+      </ul>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/post/txvr5vqm.html">
+        <span class="next-text nav-default">frp内网无法穿透解决</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+      
+        
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+    <div id="gitalk-container"></div>
+
+    <script>
+        var gitalk = new Gitalk({
+            clientID: 'ca4ae20760cf27ad5c6c',
+            clientSecret: '671788fb8d6aed08906b70340a8ba3088ec03f39',
+            repo: 'gd4Ark.github.io',
+            owner: 'gd4Ark',
+            admin: 'gd4Ark',
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: 'false'  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+      
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2019 -
+    
+    2020
+    <span class="footer-author">Xiaoyi.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+<!--prettify代码高亮脚本引入-->
+
+    <script src="/plugins/prettify/prettify.js"></script>
+    <script type="text/javascript">
+    jQuery(function($){
+        $('pre').addClass('prettyprint');
+        prettyPrint();
+    });
+    </script>
+
+
+  </body>
+</html>

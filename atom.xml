@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-03-19T04:00:16.679Z</updated>
+  <updated>2020-03-21T05:46:23.523Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何解决C盘根目录无法创建或写入文件</title>
+    <link href="https://dwqy.github.io/post/c-writer-user.html"/>
+    <id>https://dwqy.github.io/post/c-writer-user.html</id>
+    <published>2020-03-21T05:42:58.000Z</published>
+    <updated>2020-03-21T05:46:23.523Z</updated>
+    
+    <content type="html"><![CDATA[<p>eos中打开报表会在c盘中创建一个临时问题，加域的电脑或者是user权限的就无法打开，之前添加everyone和当前域用户都无法解决，原来只要添加user的全完权限即可。</p><p>解决办法1：用管理员运行cmd 输入</p><p>icacls c:\ /setintegritylevel M</p><p>解决办法2：</p><ol><li>选中C盘</li><li>点右键选中属性（properties）</li><li>选“安全”（Security） Tab</li><li>Users</li><li>“编辑”（Edit）</li><li>‘Full Control’</li><li>‘Apply’</li><li>‘OK’</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;eos中打开报表会在c盘中创建一个临时问题，加域的电脑或者是user权限的就无法打开，之前添加everyone和当前域用户都无法解决，原来只要添加user的全完权限即可。&lt;/p&gt;
+&lt;p&gt;解决办法1：用管理员运行cmd 输入&lt;/p&gt;
+&lt;p&gt;icacls c:\ /setint
+      
+    
+    </summary>
+    
+      <category term="桌面运维" scheme="https://dwqy.github.io/categories/%E6%A1%8C%E9%9D%A2%E8%BF%90%E7%BB%B4/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>frp内网无法穿透解决</title>
@@ -455,26 +480,6 @@
     </summary>
     
       <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>新的开始</title>
-    <link href="https://dwqy.github.io/post/f6ef2a76.html"/>
-    <id>https://dwqy.github.io/post/f6ef2a76.html</id>
-    <published>2019-12-29T06:51:15.000Z</published>
-    <updated>2019-12-29T07:12:56.017Z</updated>
-    
-    <content type="html"><![CDATA[<div class="excerpt"><br>新的HEXO，使用的是新的模板，花了点时间整了点自己需要的东西。<br></div><a id="more"></a><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>新的HEXO，使用的是新的模板，花了点时间整了点自己需要的东西。</p><h2 id="CSHARP需要学习"><a href="#CSHARP需要学习" class="headerlink" title="CSHARP需要学习"></a>CSHARP需要学习</h2><p>虽然学习这个不好找工作，但是现有公司有这个环境，自己学好winform然后重写手动包装线，做出点成绩，想转到开发组去。</p><h2 id="文档能力需要提升"><a href="#文档能力需要提升" class="headerlink" title="文档能力需要提升"></a>文档能力需要提升</h2><p>昨天的岗位竞聘自己文档写的太烂了，这方面需要提升。</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>先写这点吧，做个有条理的人。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;excerpt&quot;&gt;&lt;br&gt;新的HEXO，使用的是新的模板，花了点时间整了点自己需要的东西。&lt;br&gt;&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="日记" scheme="https://dwqy.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
     
     
   </entry>
