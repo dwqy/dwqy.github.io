@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dwqy.github.io/"/>
-  <updated>2020-04-07T03:23:47.710Z</updated>
+  <updated>2020-05-02T09:17:51.677Z</updated>
   <id>https://dwqy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>累只是为了自己更好走出舒适区</title>
+    <link href="https://dwqy.github.io/post/pbtyqtvo.html"/>
+    <id>https://dwqy.github.io/post/pbtyqtvo.html</id>
+    <published>2020-05-02T09:13:25.000Z</published>
+    <updated>2020-05-02T09:17:51.677Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/post/pbtyqtvo/1.jpg" alt="整理电脑"></p><p>今天以为很轻松，结果忙的半死，现在还在休息，好久没有这么累了。</p><p>吃不了苦？NO！不想做这种无意义的工作，SO，给自己警示，赶紧把java学出来，看能不能跳到开发吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/post/pbtyqtvo/1.jpg&quot; alt=&quot;整理电脑&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天以为很轻松，结果忙的半死，现在还在休息，好久没有这么累了。&lt;/p&gt;
+&lt;p&gt;吃不了苦？NO！不想做这种无意义的工作，SO，给自己警示，赶紧把java学出来，看能不能跳到开
+      
+    
+    </summary>
+    
+      <category term="日记" scheme="https://dwqy.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>记一次电话线路维修</title>
@@ -470,26 +495,6 @@
     <summary type="html">
     
       &lt;div class=&quot;excerpt&quot;&gt;&lt;br&gt;WinForm的控件介绍&lt;br&gt;&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="C#" scheme="https://dwqy.github.io/categories/C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>C Sharp基础知识2</title>
-    <link href="https://dwqy.github.io/post/80f4lg63.html"/>
-    <id>https://dwqy.github.io/post/80f4lg63.html</id>
-    <published>2019-12-29T21:44:12.000Z</published>
-    <updated>2020-02-28T02:01:23.210Z</updated>
-    
-    <content type="html"><![CDATA[<div class="excerpt"><br>C Sharp的基础知识，面向对象<br></div><a id="more"></a><h2 id="三-面向对象"><a href="#三-面向对象" class="headerlink" title="三.面向对象"></a>三.面向对象</h2><h3 id="1-面向对象编程简介"><a href="#1-面向对象编程简介" class="headerlink" title="1.面向对象编程简介"></a>1.面向对象编程简介</h3><ol><li>如何理解对象的概念<ul><li>某种可为人所感知的物质</li><li>思维、感受或动作所作用的物质或者精神载体</li><li>万物皆是对象</li></ul></li><li>C#中的对象是从类型中创建的。<ul><li>对象的类型在面向对象编程中有一个特殊的名称：类</li><li>“类”和“对象”是完全不同的两个概念</li><li>类是我们炒菜的菜谱，对象就是炒出来的菜</li><li>类是抽象的，对象是具体的</li></ul></li></ol><h3 id="2-定义类及类成员"><a href="#2-定义类及类成员" class="headerlink" title="2.定义类及类成员"></a>2.定义类及类成员</h3><ol><li><p>常量</p><p>与类关联的常数值</p></li><li><p>字段</p><p>类的变量</p><p>vs中一个长方块图标</p></li><li><p>方法</p><p>类可执行的计算和操作</p><p>vs中一个扳手图标正方形</p></li><li><p>属性</p><p>与读写类的命名属性相关联的操作</p><p>vs中一个扳手图标</p></li><li><p>运算符</p><p>类所支持的转换和表达式运算符</p></li><li><p>构造函数</p><p>初始化类的实例或类本身所需的操作</p><ul><li><p>默认构造函数</p><p>默认构造函数不带参数，只能把所有的成员字段初始化为标准的默认值</p></li><li><p>自定义构造函数</p><p>若显示添加了一个带参数的构造函数，则无法使 用不带任何参数的默认构造函数。但是此时我们 可以显式添加一个默认构造函数。</p></li><li><p>静态构造函数</p><p>静态构造函数没有参数和访问修饰符，只执行一 次。</p><p>一个类只能有一个静态构造函数。</p><p>静态构造函数只能访问类的静态成员，不能访问 实例成员。</p><p>无参数的实例构造函数和静态构造函数可以在同 一个类中同时定义。虽然参数列表相同，但二者 并不矛盾</p></li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;excerpt&quot;&gt;&lt;br&gt;C Sharp的基础知识，面向对象&lt;br&gt;&lt;/div&gt;
     
     </summary>
     
